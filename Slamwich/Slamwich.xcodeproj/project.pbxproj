@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C827EE1E2436A796008FE072 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C827EE1D2436A796008FE072 /* CardView.swift */; };
+		C827EE20243811F9008FE072 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C827EE1F243811F9008FE072 /* CardView.xib */; };
 		C847216C242973220019520C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C847216B242973220019520C /* AppDelegate.swift */; };
 		C847216E242973220019520C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C847216D242973220019520C /* SceneDelegate.swift */; };
 		C8472170242973220019520C /* MainPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C847216F242973220019520C /* MainPlayerViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		C827EE1D2436A796008FE072 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C827EE1F243811F9008FE072 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		C8472168242973220019520C /* Slamwich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slamwich.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C847216B242973220019520C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C847216D242973220019520C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				C847216F242973220019520C /* MainPlayerViewController.swift */,
 				C8472171242973220019520C /* Main.storyboard */,
 				C8472174242973240019520C /* Assets.xcassets */,
+				C827EE1F243811F9008FE072 /* CardView.xib */,
 				C8472176242973240019520C /* LaunchScreen.storyboard */,
 				C8472179242973240019520C /* Info.plist */,
 			);
@@ -130,6 +133,7 @@
 			files = (
 				C8472178242973240019520C /* LaunchScreen.storyboard in Resources */,
 				C8472175242973240019520C /* Assets.xcassets in Resources */,
+				C827EE20243811F9008FE072 /* CardView.xib in Resources */,
 				C8472173242973220019520C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

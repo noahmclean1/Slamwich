@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardView" customModule="Slamwich" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="oUn-p5-vOz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eee-fJ-3aX">
+                    <rect key="frame" x="35" y="68" width="80" height="80"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="9t0-3d-s9w"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUt-1I-ZJ2">
+                    <rect key="frame" x="37.5" y="10" width="75" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="75" id="BX3-qR-YZI"/>
+                        <constraint firstAttribute="height" constant="21" id="GHy-pb-bRg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chn-yX-RXN">
+                    <rect key="frame" x="41.5" y="39" width="67" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="Euk-fS-6ms"/>
+                        <constraint firstAttribute="width" constant="67" id="zZq-wH-HIF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTN-iv-yoa">
+                    <rect key="frame" x="15.5" y="156" width="119" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="XTa-NK-LTJ"/>
+                        <constraint firstAttribute="width" constant="119" id="j4j-rr-Yec"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flavor :)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N13-R7-0Ws">
+                    <rect key="frame" x="17.5" y="195" width="115" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="115" id="S1t-bM-nnP"/>
+                        <constraint firstAttribute="height" constant="46" id="g9x-N4-2Lz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="JTN-iv-yoa" secondAttribute="bottom" constant="49" id="0N5-Xf-n8e"/>
+                <constraint firstItem="eee-fJ-3aX" firstAttribute="top" secondItem="chn-yX-RXN" secondAttribute="bottom" constant="12" id="0Zp-Nv-7O2"/>
+                <constraint firstItem="JTN-iv-yoa" firstAttribute="top" secondItem="eee-fJ-3aX" secondAttribute="bottom" constant="8" id="0dv-7D-thP"/>
+                <constraint firstItem="eee-fJ-3aX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2mw-9l-mLr"/>
+                <constraint firstItem="chn-yX-RXN" firstAttribute="top" secondItem="vUt-1I-ZJ2" secondAttribute="bottom" constant="8" id="3Xj-jh-21W"/>
+                <constraint firstItem="N13-R7-0Ws" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="JzL-ZJ-FcN"/>
+                <constraint firstItem="vUt-1I-ZJ2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="T0j-EU-GYy"/>
+                <constraint firstItem="vUt-1I-ZJ2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="cvZ-9A-7AN"/>
+                <constraint firstItem="N13-R7-0Ws" firstAttribute="top" secondItem="eee-fJ-3aX" secondAttribute="bottom" constant="47" id="ohc-Q9-IEZ"/>
+                <constraint firstItem="JTN-iv-yoa" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="qYj-LX-hvc"/>
+                <constraint firstItem="chn-yX-RXN" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xYw-mg-ZdQ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-284" y="544"/>
+        </view>
+    </objects>
+</document>
