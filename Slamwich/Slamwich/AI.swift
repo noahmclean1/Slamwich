@@ -8,8 +8,6 @@
 
 import Foundation
 
-// TODO NSOperation
-
 func pickACardAI(hand: [Card], sandwichInProgress: [Card]) -> Int {
     // Simple optimizer to pick best card
     var (bestScore, bestIndex) = (-10000.0,-1)

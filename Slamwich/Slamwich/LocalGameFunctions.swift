@@ -23,6 +23,9 @@ var cards: NSDictionary?
 // All combos defined for the game
 var combos: [Combo]?
 
+// MARK: - Statuses
+var gameInProgress = false
+
 // MARK: - Deck Functions
 // Generate a deck of 100 cards for playing
 func createDeck() -> [Card] {

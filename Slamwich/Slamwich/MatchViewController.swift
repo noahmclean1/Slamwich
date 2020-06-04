@@ -24,7 +24,6 @@ class MatchViewController: UIViewController {
     @IBOutlet weak var endScreenButton: UIButton!
     
     var myTurn: Bool!
-    var gameInProgress = false
     var deck = [Card]() {
         didSet {
             if deck.count < 5 {
@@ -151,6 +150,7 @@ class MatchViewController: UIViewController {
         if !gameInProgress {
             gameInProgress = true
             startGame()
+            
         }
     }
     
@@ -172,6 +172,7 @@ class MatchViewController: UIViewController {
         }
     }
 
+    
     // MARK: - Game Interaction Functions
     func startGame() {
         // Create and shuffle both decks
@@ -206,7 +207,7 @@ class MatchViewController: UIViewController {
         // Animate bread appearance
         let newcard = CardView(card: bread, at: sandwichSlot.center)
         sandwichSlot.addSubview(newcard)
-        newcard.scaleCard(scale: 0.75, isGrabbed: true)
+        newcard.scaleCard(scale: 1.25, isGrabbed: true)
         newcard.center = sandwichSlot.convert(sandwichSlot.center, from: self.view)
         displayMessage("Free Bread!", inflection: "bonus")
         
@@ -267,7 +268,7 @@ class MatchViewController: UIViewController {
             // Animate bread appearance
             let newcard = CardView(card: bread, at: sandwichSlot.center)
             sandwichSlot.addSubview(newcard)
-            newcard.scaleCard(scale: 0.75, isGrabbed: true)
+            newcard.scaleCard(scale: 1.25, isGrabbed: true)
             newcard.center = sandwichSlot.convert(sandwichSlot.center, from: self.view)
             displayMessage("Free Bread!", inflection: "bonus")
         }
@@ -277,8 +278,13 @@ class MatchViewController: UIViewController {
             turnLabel.textColor =  UIColor(displayP3Red: 0.0, green: 0.5, blue: 0.169, alpha: 1)
             flashTurnLabel()
             
-            for view in handContainer.subviews {
+            for (i,view) in handContainer.subviews.enumerated() {
                 view.isUserInteractionEnabled = true
+                UIView.animate(withDuration: 0.25, animations: {
+                    if self.sandwich.count != 0 || self.myHand[i].type == "bread" {
+                        view.alpha = 1.0
+                    }
+                })
             }
         }
         else {
@@ -288,6 +294,9 @@ class MatchViewController: UIViewController {
             
             for view in handContainer.subviews {
                 view.isUserInteractionEnabled = false
+                UIView.animate(withDuration: 0.25, animations: {
+                    view.alpha = 0.5
+                })
             }
             
             // Perform the AI's turn logic
@@ -299,7 +308,7 @@ class MatchViewController: UIViewController {
             
             // Animate play
             UIView.animate(withDuration: 1.5, animations: {
-                playedCard.scaleCard(scale: 0.75, isGrabbed: true)
+                playedCard.scaleCard(scale: 1.25, isGrabbed: true)
                 self.sandwichSlot.addSubview(playedCard)
                 playedCard.center = self.sandwichSlot.convert(self.sandwichSlot.center, from: self.view)
             }, completion: {
@@ -344,7 +353,6 @@ class MatchViewController: UIViewController {
             }
             
             // Reset card visual
-            // TODO animate completion!
             for view in sandwichSlot.subviews {
                 if view.tag != 1 {
                     view.removeFromSuperview()
@@ -549,10 +557,8 @@ class MatchViewController: UIViewController {
                 
                 // Is the play valid? Then play it!
                 if validPlay(card: gestureView.card, sandwich: sandwich) && !expanded{
-                    
-                    // TODO small random rotation!
-                    
-                    gestureView.scaleCard(scale: 0.75, isGrabbed: true)
+                                        
+                    gestureView.scaleCard(scale: 1.25, isGrabbed: true)
                     gestureView.removeFromSuperview()
                     sandwichSlot.addSubview(gestureView)
                     gestureView.center = sandwichSlot.convert(sandwichSlot.center, from: view)
