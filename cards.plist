@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bread</key>
+	<array>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Whole_Wheat</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>"boring"
+</string>
+			<key>name</key>
+			<string>White</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Rye</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Baguette</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Sourdough</string>
+			<key>value</key>
+			<string>1.5</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Bagel</string>
+			<key>value</key>
+			<string>2</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>"Gross!"
+</string>
+			<key>name</key>
+			<string>Moldy_Bread</string>
+			<key>value</key>
+			<string>-3</string>
+		</dict>
+	</array>
+	<key>cheese</key>
+	<array>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Cheddar</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Gouda</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Pepperjack</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Havarti</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Swiss</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>American</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Parmesean</string>
+			<key>value</key>
+			<string>0.5</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Day_Old_Cheese</string>
+			<key>value</key>
+			<string>-2</string>
+		</dict>
+	</array>
+	<key>condiment</key>
+	<array>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Ketchup</string>
+			<key>value</key>
+			<string>0.5</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Mustard</string>
+			<key>value</key>
+			<string>0.5</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Relish</string>
+			<key>value</key>
+			<string>0.5</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Mayo</string>
+			<key>value</key>
+			<string>0.5</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Pesto</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Barbeque</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+	</array>
+	<key>fruit</key>
+	<array>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Grape_Jelly</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Banana</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+	</array>
+	<key>meat</key>
+	<array>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Turkey</string>
+			<key>value</key>
+			<string>2</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Ham</string>
+			<key>value</key>
+			<string>2</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Roast_Beef</string>
+			<key>value</key>
+			<string>2</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Salami</string>
+			<key>value</key>
+			<string>2</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Pastrami</string>
+			<key>value</key>
+			<string>2</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Bacon</string>
+			<key>value</key>
+			<string>3</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Bologna</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Spam</string>
+			<key>value</key>
+			<string>0.5</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Proscuitto</string>
+			<key>value</key>
+			<string>3.5</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Ground_Beef</string>
+			<key>value</key>
+			<string>1.5</string>
+		</dict>
+	</array>
+	<key>other</key>
+	<array>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Peanut_Butter</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+	</array>
+	<key>veggie</key>
+	<array>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Lettuce</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Pickle</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Tomato</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Cabbage</string>
+			<key>value</key>
+			<string>0.5</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Spinach</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Carrots</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>"Spicy!"
+</string>
+			<key>name</key>
+			<string>Jalapenos</string>
+			<key>value</key>
+			<string>2</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Avocado</string>
+			<key>value</key>
+			<string>3</string>
+		</dict>
+	</array>
+</dict>
+</plist>

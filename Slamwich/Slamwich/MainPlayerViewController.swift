@@ -7,62 +7,95 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class MainPlayerViewController: UIViewController {
 
-    @IBOutlet var cardSlots: [UIView]!
-    @IBOutlet weak var cardContainer: CardView!
+    @IBOutlet weak var breadtop: UIImageView!
+    @IBOutlet weak var logo: UIImageView!
+    @IBOutlet weak var breadbottom: UIImageView!
+    @IBOutlet weak var versionLabel: UILabel!
+    
+    let logoOffset: CGFloat = 300.0
+    var logoInPlace = false
+    var ref: DatabaseReference!
+    var isQueued = false {
+        didSet {
+            // TODO
+            print(isQueued)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Spawn the views upwards
+        breadtop.center.y -= logoOffset
+        breadbottom.center.y -= logoOffset
+        logo.center.y -= logoOffset
+        
+        let version: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
+        
+        versionLabel.text = "patch \(version)"
 
-        let tap = UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
-        cardContainer.addGestureRecognizer(tap)
+        
+        overrideUserInterfaceStyle = .light
+        ref = Database.database().reference()
+        
     }
-
-    @objc func handlePan(_ gesture: UIPanGestureRecognizer) {
-        let translation = gesture.translation(in: view)
-        
-        guard let gView = gesture.view else {
-            return
-        }
-        
-        guard let gestureView = gView as? CardView else {
-            return
-        }
-
-        if (gesture.state == .ended) {
-            let num = checkOverlap(cardView: gestureView)
-            if num == -1 {
-                gestureView.scaleCard(scale: 1.0)
-            }
-            else {
-                gestureView.scaleCard(scale: 0.75)
-            }
-        }
-        else if (gesture.state == .began) {
-            gestureView.scaleCard(scale: 1.1)
-        }
-                
-        gestureView.center = CGPoint(
-        x: gestureView.center.x + translation.x,
-        y: gestureView.center.y + translation.y
-        )
-
-        gesture.setTranslation(.zero, in: view)
-        
-        
-        }
     
-    func checkOverlap(cardView: UIView) -> Int {
-        for slot in cardSlots {
-            if cardView.frame.intersects(slot.frame) {
-                return slot.tag
-            }
-        }
-        return -1
-    }
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
+        if !logoInPlace {
+            // Drop the sandwich pieces down
+            dropPiece(piece: breadbottom, completion: {
+                _ in
+                self.dropPiece(piece: self.logo, completion: {
+                    _ in
+                    self.dropPiece(piece: self.breadtop, completion: nil)
+                })
+            })
+            
+            logoInPlace = true
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Find Match" {
+            
+        }
+        if segue.identifier == "AIMatch" {
+            guard let vc = segue.destination as? MatchViewController else {return}
+            vc.myTurn = Bool.random()
+            
+        }
+    }
+    
+    func dropPiece(piece: UIImageView, completion: ((Bool) -> ())?) {
+        UIView.animate(withDuration: 0.5, animations: {
+            piece.center = CGPoint(x: piece.center.x, y: piece.center.y
+                + self.logoOffset)
+        }, completion: completion)
+    }
+    
+    @IBAction func lookForMatch(_ sender: Any) {
+        GameManager.global.enqueueUser(user: "me!")
+    }
+    
+    @IBAction func sendData(_ sender: Any) {
+        let user = "added"
+        GameManager.global.enqueueUser(user: user)
+    }
+    
+    @IBAction func grabData(_ sender: Any) {
+        ref.child("queuedUsers").observe(.value, with: { (snapshot) in
+            guard let val = snapshot.value as? Dictionary<String, Any> else {return}
+            print("--- GRAB DATA ---")
+            print(val.count)
+            print(val)
+        })
+    }
 }
 

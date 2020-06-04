@@ -3,23 +3,46 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C817DF512453C0C200361786 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C817DF502453C0C200361786 /* GameManager.swift */; };
+		C817DF532454094F00361786 /* WaitingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C817DF522454094F00361786 /* WaitingScreenViewController.swift */; };
+		C817DF55245508A100361786 /* GameDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C817DF54245508A100361786 /* GameDataTypes.swift */; };
+		C817DF5B245550A400361786 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C817DF5A245550A400361786 /* MatchViewController.swift */; };
 		C827EE1E2436A796008FE072 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C827EE1D2436A796008FE072 /* CardView.swift */; };
 		C827EE20243811F9008FE072 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C827EE1F243811F9008FE072 /* CardView.xib */; };
+		C841774B244FDB6D00C2E83F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C841774A244FDB6C00C2E83F /* GoogleService-Info.plist */; };
 		C847216C242973220019520C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C847216B242973220019520C /* AppDelegate.swift */; };
 		C847216E242973220019520C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C847216D242973220019520C /* SceneDelegate.swift */; };
 		C8472170242973220019520C /* MainPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C847216F242973220019520C /* MainPlayerViewController.swift */; };
 		C8472173242973220019520C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8472171242973220019520C /* Main.storyboard */; };
 		C8472175242973240019520C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8472174242973240019520C /* Assets.xcassets */; };
 		C8472178242973240019520C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8472176242973240019520C /* LaunchScreen.storyboard */; };
+		C8B633DE24774EF8003B3DE8 /* LocalGameFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B633DD24774EF8003B3DE8 /* LocalGameFunctions.swift */; };
+		C8B633E224775CBC003B3DE8 /* cards.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8B633E124775CBC003B3DE8 /* cards.plist */; };
+		C8B633E424789575003B3DE8 /* AI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B633E324789575003B3DE8 /* AI.swift */; };
+		C8B633E72479CDEC003B3DE8 /* combos.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8B633E62479CDEC003B3DE8 /* combos.plist */; };
+		C8F8F3E12487385A0045325B /* EndScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8F3E02487385A0045325B /* EndScreenViewController.swift */; };
+		C8F8F3E324874DFB0045325B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8F3E224874DFB0045325B /* SettingsViewController.swift */; };
+		C8F8F3E524874E470045325B /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8F3E424874E470045325B /* InstructionsViewController.swift */; };
+		C8F8F3E7248823A10045325B /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8F3E6248823A10045325B /* CardTableViewCell.swift */; };
+		C8F8F3E924884CD40045325B /* ComboTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8F3E824884CD40045325B /* ComboTableViewCell.swift */; };
+		C8F8F3EB24886A500045325B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8F3EA24886A500045325B /* SplashViewController.swift */; };
+		D4F47DB67A70B0339AEE85AA /* Pods_Slamwich.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29FDB8E3FD01EAC58BD844D /* Pods_Slamwich.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B29FDB8E3FD01EAC58BD844D /* Pods_Slamwich.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Slamwich.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEDBC7DAFB3DE14123F6C4B1 /* Pods-Slamwich.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Slamwich.release.xcconfig"; path = "Target Support Files/Pods-Slamwich/Pods-Slamwich.release.xcconfig"; sourceTree = "<group>"; };
+		C817DF502453C0C200361786 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		C817DF522454094F00361786 /* WaitingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingScreenViewController.swift; sourceTree = "<group>"; };
+		C817DF54245508A100361786 /* GameDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataTypes.swift; sourceTree = "<group>"; };
+		C817DF5A245550A400361786 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		C827EE1D2436A796008FE072 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C827EE1F243811F9008FE072 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		C841774A244FDB6C00C2E83F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C8472168242973220019520C /* Slamwich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slamwich.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C847216B242973220019520C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C847216D242973220019520C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +51,17 @@
 		C8472174242973240019520C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8472177242973240019520C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8472179242973240019520C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8B633DD24774EF8003B3DE8 /* LocalGameFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalGameFunctions.swift; sourceTree = "<group>"; };
+		C8B633E124775CBC003B3DE8 /* cards.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = cards.plist; path = ../../cards.plist; sourceTree = "<group>"; };
+		C8B633E324789575003B3DE8 /* AI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AI.swift; sourceTree = "<group>"; };
+		C8B633E62479CDEC003B3DE8 /* combos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = combos.plist; path = ../../combos.plist; sourceTree = "<group>"; };
+		C8F8F3E02487385A0045325B /* EndScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScreenViewController.swift; sourceTree = "<group>"; };
+		C8F8F3E224874DFB0045325B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C8F8F3E424874E470045325B /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
+		C8F8F3E6248823A10045325B /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		C8F8F3E824884CD40045325B /* ComboTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComboTableViewCell.swift; sourceTree = "<group>"; };
+		C8F8F3EA24886A500045325B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		EC9804A8E958AF50DE4EA379 /* Pods-Slamwich.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Slamwich.debug.xcconfig"; path = "Target Support Files/Pods-Slamwich/Pods-Slamwich.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +69,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4F47DB67A70B0339AEE85AA /* Pods_Slamwich.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B68B9A4EF7036BDD07497B58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC9804A8E958AF50DE4EA379 /* Pods-Slamwich.debug.xcconfig */,
+				BEDBC7DAFB3DE14123F6C4B1 /* Pods-Slamwich.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C847215F242973220019520C = {
 			isa = PBXGroup;
 			children = (
 				C847216A242973220019520C /* Slamwich */,
 				C8472169242973220019520C /* Products */,
+				B68B9A4EF7036BDD07497B58 /* Pods */,
+				DA90851F5B808B8025290F3E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,13 +110,44 @@
 				C847216D242973220019520C /* SceneDelegate.swift */,
 				C827EE1D2436A796008FE072 /* CardView.swift */,
 				C847216F242973220019520C /* MainPlayerViewController.swift */,
+				C8B633E62479CDEC003B3DE8 /* combos.plist */,
+				C8B633E124775CBC003B3DE8 /* cards.plist */,
+				C817DF502453C0C200361786 /* GameManager.swift */,
+				C8B633E324789575003B3DE8 /* AI.swift */,
+				C8B633E52479B030003B3DE8 /* Resources */,
+				C8B633DD24774EF8003B3DE8 /* LocalGameFunctions.swift */,
+				C817DF54245508A100361786 /* GameDataTypes.swift */,
+				C817DF5A245550A400361786 /* MatchViewController.swift */,
+				C8F8F3EA24886A500045325B /* SplashViewController.swift */,
+				C8F8F3E02487385A0045325B /* EndScreenViewController.swift */,
+				C8F8F3E424874E470045325B /* InstructionsViewController.swift */,
+				C8F8F3E6248823A10045325B /* CardTableViewCell.swift */,
+				C8F8F3E824884CD40045325B /* ComboTableViewCell.swift */,
+				C8F8F3E224874DFB0045325B /* SettingsViewController.swift */,
+				C817DF522454094F00361786 /* WaitingScreenViewController.swift */,
 				C8472171242973220019520C /* Main.storyboard */,
 				C8472174242973240019520C /* Assets.xcassets */,
 				C827EE1F243811F9008FE072 /* CardView.xib */,
 				C8472176242973240019520C /* LaunchScreen.storyboard */,
 				C8472179242973240019520C /* Info.plist */,
+				C841774A244FDB6C00C2E83F /* GoogleService-Info.plist */,
 			);
 			path = Slamwich;
+			sourceTree = "<group>";
+		};
+		C8B633E52479B030003B3DE8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DA90851F5B808B8025290F3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B29FDB8E3FD01EAC58BD844D /* Pods_Slamwich.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C847217C242973240019520C /* Build configuration list for PBXNativeTarget "Slamwich" */;
 			buildPhases = (
+				BAF1391BC317E8BE876D5905 /* [CP] Check Pods Manifest.lock */,
 				C8472164242973220019520C /* Sources */,
 				C8472165242973220019520C /* Frameworks */,
 				C8472166242973220019520C /* Resources */,
+				CCFFBFFAED4614BC8D0D26BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,8 +210,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8B633E224775CBC003B3DE8 /* cards.plist in Resources */,
 				C8472178242973240019520C /* LaunchScreen.storyboard in Resources */,
 				C8472175242973240019520C /* Assets.xcassets in Resources */,
+				C841774B244FDB6D00C2E83F /* GoogleService-Info.plist in Resources */,
+				C8B633E72479CDEC003B3DE8 /* combos.plist in Resources */,
 				C827EE20243811F9008FE072 /* CardView.xib in Resources */,
 				C8472173242973220019520C /* Main.storyboard in Resources */,
 			);
@@ -140,15 +222,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BAF1391BC317E8BE876D5905 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Slamwich-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCFFBFFAED4614BC8D0D26BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Slamwich/Pods-Slamwich-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Slamwich/Pods-Slamwich-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Slamwich/Pods-Slamwich-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C8472164242973220019520C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C817DF5B245550A400361786 /* MatchViewController.swift in Sources */,
 				C8472170242973220019520C /* MainPlayerViewController.swift in Sources */,
+				C8F8F3E924884CD40045325B /* ComboTableViewCell.swift in Sources */,
 				C847216C242973220019520C /* AppDelegate.swift in Sources */,
+				C8B633E424789575003B3DE8 /* AI.swift in Sources */,
 				C827EE1E2436A796008FE072 /* CardView.swift in Sources */,
+				C817DF512453C0C200361786 /* GameManager.swift in Sources */,
+				C8B633DE24774EF8003B3DE8 /* LocalGameFunctions.swift in Sources */,
+				C8F8F3E12487385A0045325B /* EndScreenViewController.swift in Sources */,
+				C817DF55245508A100361786 /* GameDataTypes.swift in Sources */,
+				C817DF532454094F00361786 /* WaitingScreenViewController.swift in Sources */,
 				C847216E242973220019520C /* SceneDelegate.swift in Sources */,
+				C8F8F3E524874E470045325B /* InstructionsViewController.swift in Sources */,
+				C8F8F3E324874DFB0045325B /* SettingsViewController.swift in Sources */,
+				C8F8F3E7248823A10045325B /* CardTableViewCell.swift in Sources */,
+				C8F8F3EB24886A500045325B /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,10 +426,11 @@
 		};
 		C847217D242973240019520C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC9804A8E958AF50DE4EA379 /* Pods-Slamwich.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HG2L8KT2D7;
+				DEVELOPMENT_TEAM = 723KYE3F9E;
 				INFOPLIST_FILE = Slamwich/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -308,10 +445,11 @@
 		};
 		C847217E242973240019520C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEDBC7DAFB3DE14123F6C4B1 /* Pods-Slamwich.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HG2L8KT2D7;
+				DEVELOPMENT_TEAM = 723KYE3F9E;
 				INFOPLIST_FILE = Slamwich/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

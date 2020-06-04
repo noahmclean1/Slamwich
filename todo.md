@@ -1,14 +1,15 @@
-TODOs:
+#TODOs:
 
-> MAJOR
+##> MAJOR
 - Add card placing
 - Add starting plist for cards
 
-> MINOR
+##> MINOR
 - Fix cornering on cards
-- Programmatic card generation
+- `Programmatic` card generation
 
-> PLANNED
+##> PLANNED
 - Add drawing button
 - Assign points to cards
 - Art!
+- Stylize Cards

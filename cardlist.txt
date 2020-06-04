@@ -1,0 +1,51 @@
+Whole_Wheat 1 bread ""
+White 1 bread "boring"
+Rye 1 bread ""
+Baguette 1 bread ""
+Sourdough 1.5 bread ""
+Bagel 2 bread ""
+Moldy_Bread -3 bread "Gross!"
+
+Cheddar 1 cheese ""
+Gouda 1 cheese ""
+Pepperjack 1 cheese ""
+Havarti 1 cheese ""
+Swiss 1 cheese ""
+American 1 cheese ""
+Parmesean 0.5 cheese ""
+Day_Old_Cheese -2 cheese ""
+
+Turkey 2 meat ""
+Ham 2 meat ""
+Roast_Beef 2 meat ""
+Salami 2 meat ""
+Pastrami 2 meat ""
+Bacon 3 meat ""
+Bologna 1 meat ""
+Spam 0.5 meat ""
+Proscuitto 3.5 meat ""
+Ground_Beef 1.5 meat ""
+
+Lettuce 1 veggie ""
+Pickle 1 veggie ""
+Tomato 1 veggie ""
+Cabbage 0.5 veggie ""
+Spinach 1 veggie ""
+Carrots 1 veggie ""
+Jalapenos 2 veggie "Spicy!"
+Avocado 3 veggie ""
+
+Ketchup 0.5 condiment ""
+Mustard 0.5 condiment ""
+Relish 0.5 condiment ""
+Mayo 0.5 condiment ""
+Pesto 1 condiment ""
+Barbeque 1 condiment ""
+Peanut_Butter 1 condiment ""
+
+Grape_Jelly 1 fruit ""
+Banana 1 fruit ""
+
+
+
+# Powerups

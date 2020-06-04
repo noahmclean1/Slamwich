@@ -1,0 +1,9 @@
+Classic 2 Peanut_Butter Grape_Jelly
+BLT 3 Bacon Lettuce Tomato
+Cubano 2 Ham Pickle
+House_Special 2 Turkey Cheddar
+Grilled_Cheese 2 t:cheese t:cheese t:cheese
+Italian 2 Salami Bologna Proscuitto
+Tuna_Salad 3 Tuna Mayo Lettuce
+Cole_Slaw 1.5 Cabbage Mayo Carrots
+Peanut_Banana 2 Peanut_Butter Banana
