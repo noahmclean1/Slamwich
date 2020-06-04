@@ -29,19 +29,23 @@ class MainPlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Spawn the views upwards
-        breadtop.center.y -= logoOffset
-        breadbottom.center.y -= logoOffset
-        logo.center.y -= logoOffset
-        
         let version: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
         
-        versionLabel.text = "patch \(version)"
+        versionLabel.text = "Patch \(version)"
 
         
         overrideUserInterfaceStyle = .light
         ref = Database.database().reference()
         
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        // Spawn the views upwards
+        breadtop.center.y -= logoOffset
+        breadbottom.center.y -= logoOffset
+        logo.center.y -= logoOffset
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -74,7 +78,7 @@ class MainPlayerViewController: UIViewController {
     }
     
     func dropPiece(piece: UIImageView, completion: ((Bool) -> ())?) {
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: 0.25, animations: {
             piece.center = CGPoint(x: piece.center.x, y: piece.center.y
                 + self.logoOffset)
         }, completion: completion)

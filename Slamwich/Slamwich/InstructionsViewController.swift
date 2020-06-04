@@ -24,6 +24,8 @@ class InstructionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        overrideUserInterfaceStyle = .light
+        
         // Add in instructions in a properly formatted manner
         mainInstructions.text = """
                                 Slamwich is a game about making (and eating) sandwiches.\n

@@ -150,7 +150,7 @@ class GameManager {
                 return
             }
             
-            print("Game Snapshot:", snapshot.key as? String)
+            print("Game Snapshot:", snapshot.key)
             
             var gData: GameData!
             

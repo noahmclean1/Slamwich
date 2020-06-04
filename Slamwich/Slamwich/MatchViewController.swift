@@ -115,17 +115,23 @@ class MatchViewController: UIViewController {
         
         // Set up emitter layer
         let emit = CAEmitterLayer()
-        emit.position = sandwichSlot.center
+        emit.position = CGPoint(x: sandwichSlot.center.x, y: 0.0)
         
         
         let cell = CAEmitterCell()
         cell.name = "spark"
         cell.birthRate = 50
-        cell.lifetime = 10
+        cell.lifetime = 14
         cell.velocity = 200
+        cell.yAcceleration = 50.0
         cell.scale = 0.1
-        cell.alphaSpeed = -0.5
-        cell.color = CGColor(srgbRed: 0.7, green: 0.6, blue: 0, alpha: 1)
+        cell.scaleRange = 0.2
+        cell.alphaSpeed = -0.1
+        cell.color = CGColor(srgbRed: 0.5, green: 0.5, blue: 0.5, alpha: 1)
+        cell.redRange = 0.8
+        cell.blueRange = 0.8
+        cell.greenRange = 0.8
+        
         
         cell.emissionRange = CGFloat.pi * 2.0
         cell.contents = UIImage(named: "spark")!.cgImage
@@ -483,10 +489,8 @@ class MatchViewController: UIViewController {
     func endingAnimation(didIWin me: Bool) {
         if me {
             
-            DispatchQueue.global().async {
-                print("emit")
-                self.emitter.birthRate = 50
-                sleep(1)
+            self.emitter.birthRate = 50
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.emitter.birthRate = 0
             }
         }

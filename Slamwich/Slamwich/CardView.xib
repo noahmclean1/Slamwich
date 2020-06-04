@@ -22,31 +22,55 @@
             <rect key="frame" x="0.0" y="0.0" width="150" height="250"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MBV-8n-PEh">
-                    <rect key="frame" x="5" y="5" width="139" height="240"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.84119816631230004" green="0.7262195556640183" blue="0.58595458035337289" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBV-8n-PEh">
+                    <rect key="frame" x="5" y="5" width="140" height="240"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oFU-uf-xfT">
+                            <rect key="frame" x="8" y="7" width="40" height="29"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doP-9r-Qwa">
+                                    <rect key="frame" x="0.0" y="5" width="40" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.68044098984771573" green="0.56693819760168529" blue="0.38189391873014727" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chn-yX-RXN">
+                            <rect key="frame" x="56.5" y="13" width="80" height="17"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="17" id="Euk-fS-6ms"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="MDR-xh-LbA"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUt-1I-ZJ2">
+                            <rect key="frame" x="30" y="47" width="80" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="BX3-qR-YZI"/>
+                                <constraint firstAttribute="height" constant="21" id="GHy-pb-bRg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.8687292022712042" green="0.79364814779802639" blue="0.70205509242364494" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="chn-yX-RXN" firstAttribute="leading" secondItem="oFU-uf-xfT" secondAttribute="trailing" constant="8.5" id="2A6-vr-2pY"/>
+                        <constraint firstItem="vUt-1I-ZJ2" firstAttribute="centerX" secondItem="MBV-8n-PEh" secondAttribute="centerX" id="B8z-Lr-lwT"/>
+                        <constraint firstItem="chn-yX-RXN" firstAttribute="centerX" secondItem="MBV-8n-PEh" secondAttribute="centerX" constant="26.5" id="GEs-LN-VE6"/>
+                        <constraint firstItem="vUt-1I-ZJ2" firstAttribute="top" secondItem="MBV-8n-PEh" secondAttribute="top" constant="47" id="YZo-sG-Dv6"/>
+                        <constraint firstItem="vUt-1I-ZJ2" firstAttribute="top" secondItem="oFU-uf-xfT" secondAttribute="bottom" constant="11" id="abS-y0-9nP"/>
+                        <constraint firstItem="oFU-uf-xfT" firstAttribute="leading" secondItem="MBV-8n-PEh" secondAttribute="leadingMargin" id="cYD-9Z-wwc"/>
+                        <constraint firstItem="vUt-1I-ZJ2" firstAttribute="top" secondItem="chn-yX-RXN" secondAttribute="bottom" constant="17" id="dwo-Oe-cQ9"/>
+                        <constraint firstItem="chn-yX-RXN" firstAttribute="centerY" secondItem="oFU-uf-xfT" secondAttribute="centerY" id="zbB-rE-x3l"/>
+                    </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUt-1I-ZJ2">
-                    <rect key="frame" x="37.5" y="5" width="75" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="BX3-qR-YZI"/>
-                        <constraint firstAttribute="height" constant="21" id="GHy-pb-bRg"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chn-yX-RXN">
-                    <rect key="frame" x="64" y="44" width="80" height="17"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="17" id="Euk-fS-6ms"/>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="MDR-xh-LbA"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Description Name Goes Here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTN-iv-yoa">
                     <rect key="frame" x="5" y="170" width="140" height="75"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -60,33 +84,19 @@
                         <constraint firstAttribute="height" constant="80" id="LxD-9T-Qom"/>
                     </constraints>
                 </imageView>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oFU-uf-xfT">
-                    <rect key="frame" x="16" y="37" width="40" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doP-9r-Qwa">
-                            <rect key="frame" x="0.0" y="5" width="40" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" red="0.68044098984771573" green="0.56693819760168529" blue="0.38189391873014727" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                </view>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="chn-yX-RXN" firstAttribute="top" secondItem="vUt-1I-ZJ2" secondAttribute="bottom" constant="18" id="CzJ-EH-mT6"/>
-                <constraint firstItem="vUt-1I-ZJ2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="H6c-dn-y79"/>
+                <constraint firstItem="MBV-8n-PEh" firstAttribute="centerY" secondItem="wzO-gE-zlB" secondAttribute="centerY" id="A1Z-Jg-m9V"/>
                 <constraint firstItem="JTN-iv-yoa" firstAttribute="top" secondItem="wzO-gE-zlB" secondAttribute="bottom" constant="5" id="HRn-fm-2oZ"/>
+                <constraint firstItem="MBV-8n-PEh" firstAttribute="centerX" secondItem="wzO-gE-zlB" secondAttribute="centerX" id="JI2-34-OAJ"/>
                 <constraint firstItem="wzO-gE-zlB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Myn-DD-Qxw"/>
                 <constraint firstAttribute="bottom" secondItem="JTN-iv-yoa" secondAttribute="bottom" constant="5" id="Uwu-fL-uZa"/>
-                <constraint firstItem="chn-yX-RXN" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="29" id="XyJ-qn-Als"/>
                 <constraint firstItem="wzO-gE-zlB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Zbu-NS-n33"/>
                 <constraint firstItem="JTN-iv-yoa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="buQ-Sy-UoJ"/>
                 <constraint firstAttribute="trailing" secondItem="JTN-iv-yoa" secondAttribute="trailing" constant="5" id="pmw-Ex-ICE"/>
-                <constraint firstItem="vUt-1I-ZJ2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="wGR-b1-msj"/>
+                <constraint firstItem="MBV-8n-PEh" firstAttribute="bottom" secondItem="JTN-iv-yoa" secondAttribute="bottom" id="wT3-IO-Tdd"/>
+                <constraint firstItem="MBV-8n-PEh" firstAttribute="leading" secondItem="JTN-iv-yoa" secondAttribute="leading" id="xPT-2l-faX"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-284.05797101449275" y="543.75"/>

@@ -30,6 +30,7 @@
 		C8F8F3E7248823A10045325B /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8F3E6248823A10045325B /* CardTableViewCell.swift */; };
 		C8F8F3E924884CD40045325B /* ComboTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8F3E824884CD40045325B /* ComboTableViewCell.swift */; };
 		C8F8F3EB24886A500045325B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8F3EA24886A500045325B /* SplashViewController.swift */; };
+		C8F8F3ED24888D3A0045325B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C8F8F3EC24888D3A0045325B /* Settings.bundle */; };
 		D4F47DB67A70B0339AEE85AA /* Pods_Slamwich.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29FDB8E3FD01EAC58BD844D /* Pods_Slamwich.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		C8F8F3E6248823A10045325B /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		C8F8F3E824884CD40045325B /* ComboTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComboTableViewCell.swift; sourceTree = "<group>"; };
 		C8F8F3EA24886A500045325B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		C8F8F3EC24888D3A0045325B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		EC9804A8E958AF50DE4EA379 /* Pods-Slamwich.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Slamwich.debug.xcconfig"; path = "Target Support Files/Pods-Slamwich/Pods-Slamwich.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,11 +112,8 @@
 				C847216D242973220019520C /* SceneDelegate.swift */,
 				C827EE1D2436A796008FE072 /* CardView.swift */,
 				C847216F242973220019520C /* MainPlayerViewController.swift */,
-				C8B633E62479CDEC003B3DE8 /* combos.plist */,
-				C8B633E124775CBC003B3DE8 /* cards.plist */,
 				C817DF502453C0C200361786 /* GameManager.swift */,
 				C8B633E324789575003B3DE8 /* AI.swift */,
-				C8B633E52479B030003B3DE8 /* Resources */,
 				C8B633DD24774EF8003B3DE8 /* LocalGameFunctions.swift */,
 				C817DF54245508A100361786 /* GameDataTypes.swift */,
 				C817DF5A245550A400361786 /* MatchViewController.swift */,
@@ -125,21 +124,17 @@
 				C8F8F3E824884CD40045325B /* ComboTableViewCell.swift */,
 				C8F8F3E224874DFB0045325B /* SettingsViewController.swift */,
 				C817DF522454094F00361786 /* WaitingScreenViewController.swift */,
-				C8472171242973220019520C /* Main.storyboard */,
 				C8472174242973240019520C /* Assets.xcassets */,
+				C8472171242973220019520C /* Main.storyboard */,
 				C827EE1F243811F9008FE072 /* CardView.xib */,
 				C8472176242973240019520C /* LaunchScreen.storyboard */,
+				C8B633E62479CDEC003B3DE8 /* combos.plist */,
+				C8B633E124775CBC003B3DE8 /* cards.plist */,
+				C8F8F3EC24888D3A0045325B /* Settings.bundle */,
 				C8472179242973240019520C /* Info.plist */,
 				C841774A244FDB6C00C2E83F /* GoogleService-Info.plist */,
 			);
 			path = Slamwich;
-			sourceTree = "<group>";
-		};
-		C8B633E52479B030003B3DE8 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		DA90851F5B808B8025290F3E /* Frameworks */ = {
@@ -210,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8F8F3ED24888D3A0045325B /* Settings.bundle in Resources */,
 				C8B633E224775CBC003B3DE8 /* cards.plist in Resources */,
 				C8472178242973240019520C /* LaunchScreen.storyboard in Resources */,
 				C8472175242973240019520C /* Assets.xcassets in Resources */,
