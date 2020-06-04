@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Emulogic-zrEw.ttf">
+            <string>Emulogic</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Instructions View Controller-->
         <scene sceneID="WtE-x3-UAH">
@@ -15,14 +20,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vXB-LD-SWG">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vXB-LD-SWG">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="119"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vXB-LD-SWG" secondAttribute="height" multiplier="414:119" id="0ci-yL-exs"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieE-Ms-qb3">
-                                <rect key="frame" x="20" y="44" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieE-Ms-qb3">
+                                <rect key="frame" x="20" y="51" width="36" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="fFi-Mz-lFh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="9"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="0.69346098759999997" green="0.2268583377" blue="0.1813471301" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -30,104 +40,139 @@
                                     <action selector="back:" destination="4Xq-Iz-Mio" eventType="touchUpInside" id="LkL-j5-qV8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKN-Nh-inD">
-                                <rect key="frame" x="120" y="64" width="162" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKN-Nh-inD">
+                                <rect key="frame" x="105" y="64" width="204" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="gJW-wm-QQF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Sample Text" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isz-qN-agG">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Sample Text" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isz-qN-agG">
                                 <rect key="frame" x="0.0" y="119" width="414" height="364"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.84119816629999999" green="0.72621955569999996" blue="0.58595458040000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.68235294120000001" green="0.85098039219999999" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="isz-qN-agG" secondAttribute="height" multiplier="207:182" id="RZ2-D0-Bi2"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i2v-7B-QVH">
                                 <rect key="frame" x="0.0" y="533" width="414" height="163"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.68044098980000001" green="0.56693819759999997" blue="0.3818939187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.36862745099999999" green="0.3921568627" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="combo" id="meP-tB-q1e" customClass="ComboTableViewCell" customModule="Slamwich" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="42.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="meP-tB-q1e" id="HjJ-mw-cHM">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="42.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyJ-oJ-xor">
-                                                    <rect key="frame" x="20" y="11" width="374" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyJ-oJ-xor">
+                                                    <rect key="frame" x="20" y="9" width="374" height="24.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="vyJ-oJ-xor" secondAttribute="bottom" constant="9" id="AWD-UT-lby"/>
+                                                <constraint firstItem="vyJ-oJ-xor" firstAttribute="leading" secondItem="HjJ-mw-cHM" secondAttribute="leading" constant="20" id="PvR-cu-E5L"/>
+                                                <constraint firstItem="vyJ-oJ-xor" firstAttribute="top" secondItem="HjJ-mw-cHM" secondAttribute="top" constant="9" id="Tn0-ea-UWc"/>
+                                                <constraint firstAttribute="trailing" secondItem="vyJ-oJ-xor" secondAttribute="trailing" constant="20" id="xVi-nD-JdD"/>
+                                            </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.96848052740097046" green="0.89901951231868271" blue="0.58044068324430675" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.72156862749999995" green="0.94901960780000005" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="comboTitle" destination="vyJ-oJ-xor" id="Qzn-ss-4hq"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Combos:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fau-C8-9nf">
-                                <rect key="frame" x="156" y="491" width="103" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Combos:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fau-C8-9nf">
+                                <rect key="frame" x="147.5" y="491" width="119" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="119" id="TiP-nw-sxR"/>
+                                    <constraint firstAttribute="height" constant="22" id="URv-lY-r5c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I9x-Xb-i1o">
-                                <rect key="frame" x="0.0" y="677" width="414" height="219"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9x-Xb-i1o">
+                                <rect key="frame" x="0.0" y="678" width="414" height="218"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Types" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msO-2p-b1t">
-                                        <rect key="frame" x="304" y="6" width="54" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                        <color key="textColor" red="0.427769438" green="0.32221431769999997" blue="0.19971672469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Types" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msO-2p-b1t">
+                                        <rect key="frame" x="311" y="14" width="40" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="jdL-b0-Pmx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="8"/>
+                                        <color key="textColor" red="0.36862745099999999" green="0.3921568627" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdA-ek-RIe">
-                                        <rect key="frame" x="186" y="156" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdA-ek-RIe">
+                                        <rect key="frame" x="186" y="157" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.15219312199999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hed-D8-ebX">
-                                        <rect key="frame" x="257" y="39" width="149" height="138"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hed-D8-ebX">
+                                        <rect key="frame" x="258" y="39" width="148" height="139"/>
+                                        <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="6"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jf-6Q-Fl1">
-                                        <rect key="frame" x="8" y="39" width="149" height="138"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jf-6Q-Fl1">
+                                        <rect key="frame" x="8" y="39" width="148" height="139"/>
+                                        <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="6"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yT-7d-EjQ">
-                                        <rect key="frame" x="32" y="8" width="101" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                        <color key="textColor" red="0.427769438" green="0.32221431769999997" blue="0.19971672469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Dny-ue-ReT">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Dny-ue-ReT">
                                         <rect key="frame" x="146" y="8" width="122" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="30c-15-GXA"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="122" id="y0f-Lg-l4l"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="9"/>
                                         <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yT-7d-EjQ">
+                                        <rect key="frame" x="26" y="14" width="88" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="GMx-gS-4VQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="8"/>
+                                        <color key="textColor" red="0.36862745099999999" green="0.3921568627" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.84119816629999999" green="0.72621955569999996" blue="0.58595458040000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.68235294120000001" green="0.85098039219999999" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hed-D8-ebX" secondAttribute="bottom" constant="40" id="0BP-GZ-Ifk"/>
+                                    <constraint firstAttribute="bottom" secondItem="7jf-6Q-Fl1" secondAttribute="bottom" constant="40" id="0s8-Tt-nMV"/>
+                                    <constraint firstAttribute="bottom" secondItem="XdA-ek-RIe" secondAttribute="bottom" constant="40" id="2Gc-jh-tx8"/>
+                                    <constraint firstItem="hed-D8-ebX" firstAttribute="top" secondItem="Dny-ue-ReT" secondAttribute="bottom" constant="10" id="5Ev-g2-DPg"/>
+                                    <constraint firstItem="msO-2p-b1t" firstAttribute="top" secondItem="I9x-Xb-i1o" secondAttribute="top" constant="14" id="6tt-aI-u2U"/>
+                                    <constraint firstAttribute="trailing" secondItem="msO-2p-b1t" secondAttribute="trailing" constant="63" id="EAC-Du-4wz"/>
+                                    <constraint firstItem="7jf-6Q-Fl1" firstAttribute="top" secondItem="Dny-ue-ReT" secondAttribute="bottom" constant="10" id="IMf-4C-Vyr"/>
+                                    <constraint firstItem="9yT-7d-EjQ" firstAttribute="top" secondItem="I9x-Xb-i1o" secondAttribute="top" constant="14" id="J1e-Fv-OVX"/>
+                                    <constraint firstItem="hed-D8-ebX" firstAttribute="leading" secondItem="XdA-ek-RIe" secondAttribute="trailing" constant="30" id="L3S-gW-RbU"/>
+                                    <constraint firstItem="Dny-ue-ReT" firstAttribute="top" secondItem="I9x-Xb-i1o" secondAttribute="top" constant="8" id="Lxd-vt-0YY"/>
+                                    <constraint firstItem="XdA-ek-RIe" firstAttribute="centerX" secondItem="I9x-Xb-i1o" secondAttribute="centerX" id="NQj-1H-L3f"/>
+                                    <constraint firstItem="7jf-6Q-Fl1" firstAttribute="leading" secondItem="I9x-Xb-i1o" secondAttribute="leading" constant="8" id="PG7-vM-woI"/>
+                                    <constraint firstItem="XdA-ek-RIe" firstAttribute="leading" relation="lessThanOrEqual" secondItem="7jf-6Q-Fl1" secondAttribute="trailing" constant="30" id="SX0-g8-Vh8"/>
+                                    <constraint firstItem="msO-2p-b1t" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Dny-ue-ReT" secondAttribute="trailing" symbolic="YES" id="VSW-nG-eGT"/>
+                                    <constraint firstItem="9yT-7d-EjQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I9x-Xb-i1o" secondAttribute="leading" constant="20" symbolic="YES" id="etx-TX-DNQ"/>
+                                    <constraint firstItem="Dny-ue-ReT" firstAttribute="centerX" secondItem="I9x-Xb-i1o" secondAttribute="centerX" id="gYH-9l-zgd"/>
+                                    <constraint firstItem="Dny-ue-ReT" firstAttribute="leading" secondItem="9yT-7d-EjQ" secondAttribute="trailing" constant="32" id="onV-QH-dij"/>
+                                    <constraint firstAttribute="trailing" secondItem="hed-D8-ebX" secondAttribute="trailing" constant="8" id="qKt-Eq-wqk"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -135,7 +180,26 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.68044098980000001" green="0.56693819759999997" blue="0.3818939187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.36862745099999999" green="0.3921568627" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="OKN-Nh-inD" firstAttribute="centerX" secondItem="dh8-sx-bT4" secondAttribute="centerX" id="0u6-8q-845"/>
+                            <constraint firstItem="ieE-Ms-qb3" firstAttribute="top" secondItem="bGB-19-4P1" secondAttribute="top" constant="7" id="7cu-Pc-Yml"/>
+                            <constraint firstAttribute="bottom" secondItem="I9x-Xb-i1o" secondAttribute="bottom" id="AqO-lC-XDW"/>
+                            <constraint firstItem="vXB-LD-SWG" firstAttribute="leading" secondItem="bGB-19-4P1" secondAttribute="leading" id="DNh-zr-uG2"/>
+                            <constraint firstItem="fau-C8-9nf" firstAttribute="centerX" secondItem="dh8-sx-bT4" secondAttribute="centerX" id="GVy-H1-Hpb"/>
+                            <constraint firstItem="fau-C8-9nf" firstAttribute="top" secondItem="isz-qN-agG" secondAttribute="bottom" constant="8" id="IEk-Yf-vDK"/>
+                            <constraint firstItem="vXB-LD-SWG" firstAttribute="top" secondItem="dh8-sx-bT4" secondAttribute="top" id="J0N-4D-iNQ"/>
+                            <constraint firstItem="ieE-Ms-qb3" firstAttribute="leading" secondItem="bGB-19-4P1" secondAttribute="leading" constant="20" id="UGc-pm-Teh"/>
+                            <constraint firstItem="OKN-Nh-inD" firstAttribute="top" secondItem="bGB-19-4P1" secondAttribute="top" constant="20" id="XZz-Rf-TLA"/>
+                            <constraint firstItem="isz-qN-agG" firstAttribute="leading" secondItem="bGB-19-4P1" secondAttribute="leading" id="XgI-Oh-N5I"/>
+                            <constraint firstItem="I9x-Xb-i1o" firstAttribute="leading" secondItem="bGB-19-4P1" secondAttribute="leading" id="buY-QC-YMh"/>
+                            <constraint firstItem="isz-qN-agG" firstAttribute="top" secondItem="vXB-LD-SWG" secondAttribute="bottom" id="c5a-35-aBq"/>
+                            <constraint firstItem="OKN-Nh-inD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ieE-Ms-qb3" secondAttribute="trailing" constant="8" symbolic="YES" id="cMu-zJ-TMV"/>
+                            <constraint firstItem="I9x-Xb-i1o" firstAttribute="trailing" secondItem="bGB-19-4P1" secondAttribute="trailing" id="eeD-Jv-VLo"/>
+                            <constraint firstItem="isz-qN-agG" firstAttribute="trailing" secondItem="bGB-19-4P1" secondAttribute="trailing" id="fkP-Un-QD8"/>
+                            <constraint firstItem="vXB-LD-SWG" firstAttribute="trailing" secondItem="bGB-19-4P1" secondAttribute="trailing" id="ijH-Ys-r7B"/>
+                            <constraint firstItem="I9x-Xb-i1o" firstAttribute="top" secondItem="fau-C8-9nf" secondAttribute="bottom" constant="165" id="xrt-Vk-l4L"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bGB-19-4P1"/>
                     </view>
                     <connections>
@@ -179,7 +243,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.84119816629999999" green="0.72621955569999996" blue="0.58595458040000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.36862745099999999" green="0.3921568627" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="xfI-Tw-E6p"/>
                     </view>
                     <connections>
@@ -204,15 +268,16 @@
                                 <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfV-hs-w3c">
-                                <rect key="frame" x="107" y="64" width="201" height="36"/>
+                                <rect key="frame" x="107" y="64" width="221" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmk-bD-8gc">
-                                <rect key="frame" x="20" y="44" width="34" height="30"/>
+                                <rect key="frame" x="20" y="51" width="36" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="9"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="0.69346098759999997" green="0.2268583377" blue="0.1813471301" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -220,13 +285,6 @@
                                     <action selector="back:" destination="pzz-Hm-SfR" eventType="touchUpInside" id="Xe8-fv-Ki0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Special Thanks to Andrew Binkowski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKo-DE-Na7">
-                                <rect key="frame" x="64" y="841" width="286" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bie-iP-3x1">
                                 <rect key="frame" x="186" y="262" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -237,14 +295,21 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaG-F0-pUm">
                                 <rect key="frame" x="0.0" y="188" width="414" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.84119816629999999" green="0.72621955569999996" blue="0.58595458040000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.68235294120000001" green="0.85098039219999999" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <string key="text">This game is currently being developed by Noah McLean. Major changes are still underway and if you have suggestions feel free to reach out! I hope you enjoy</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Special Thanks to Andrew Binkowski and Alex McLean" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKo-DE-Na7">
+                                <rect key="frame" x="38" y="841" width="338" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="9"/>
+                                <color key="textColor" red="0.72156862749999995" green="0.94901960780000005" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.68044098980000001" green="0.56693819759999997" blue="0.3818939187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.36862745099999999" green="0.3921568627" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="3iB-5I-Oe3"/>
                     </view>
                 </viewController>
@@ -260,40 +325,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbg-je-IdS">
-                                <rect key="frame" x="141" y="363" width="132" height="72"/>
-                                <color key="backgroundColor" red="0.84119816629999999" green="0.72621955569999996" blue="0.58595458040000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="132" id="lp7-2G-Irf"/>
-                                    <constraint firstAttribute="height" constant="72" id="vG4-iR-Qvx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Play vs AI">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="qrt-yC-RFL" kind="presentation" identifier="AIMatch" id="6J8-YC-xzl"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHW-lr-6pr">
-                                <rect key="frame" x="125.5" y="495" width="163" height="72"/>
-                                <color key="backgroundColor" red="0.84119816629999999" green="0.72621955569999996" blue="0.58595458040000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="109.5" y="495" width="195" height="72"/>
+                                <color key="backgroundColor" red="0.72156862745098038" green="0.94901960784313721" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="c0f-be-qvX"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="163" id="gxe-27-yW4"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="gxe-27-yW4"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="17"/>
                                 <state key="normal" title="How To Play">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -314,12 +353,12 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znv-gQ-gRB">
                                 <rect key="frame" x="125.5" y="627" width="163" height="72"/>
-                                <color key="backgroundColor" red="0.84119816629999999" green="0.72621955569999996" blue="0.58595458040000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.95294117647058818" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="GPF-N8-RWY"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="163" id="S2R-r8-mxA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="17"/>
                                 <state key="normal" title="Settings">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -353,7 +392,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOr-ey-Zwo">
                                 <rect key="frame" x="5" y="841" width="404" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.95294117649999999" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="breadBottom" translatesAutoresizingMaskIntoConstraints="NO" id="59R-vq-vlU">
@@ -362,8 +401,34 @@
                                     <constraint firstAttribute="height" constant="63" id="RTo-LR-wmr"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbg-je-IdS">
+                                <rect key="frame" x="119.5" y="367" width="175" height="72"/>
+                                <color key="backgroundColor" red="0.68235294117647061" green="0.85098039215686272" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="175" id="lp7-2G-Irf"/>
+                                    <constraint firstAttribute="height" constant="72" id="vG4-iR-Qvx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="17"/>
+                                <state key="normal" title="Play vs AI">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="qrt-yC-RFL" kind="presentation" identifier="AIMatch" id="6J8-YC-xzl"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.68044098980000001" green="0.56693819759999997" blue="0.3818939187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.36862745098039218" green="0.39215686274509803" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="XN2-W1-DfP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3DM-x9-zpV"/>
                             <constraint firstItem="ICE-O7-PBP" firstAttribute="top" secondItem="XN2-W1-DfP" secondAttribute="bottom" id="4ln-mt-Lde"/>
@@ -372,9 +437,9 @@
                             <constraint firstItem="ICE-O7-PBP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fa0-b3-ntl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DOr-ey-Zwo" secondAttribute="trailing" id="GDS-sg-rpi"/>
                             <constraint firstItem="59R-vq-vlU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IRn-qO-Z9Z"/>
-                            <constraint firstItem="vbg-je-IdS" firstAttribute="top" secondItem="59R-vq-vlU" secondAttribute="bottom" constant="130" id="Kyu-0T-Bb9"/>
+                            <constraint firstItem="vbg-je-IdS" firstAttribute="top" secondItem="59R-vq-vlU" secondAttribute="bottom" constant="134" id="Kyu-0T-Bb9"/>
                             <constraint firstItem="znv-gQ-gRB" firstAttribute="top" secondItem="aHW-lr-6pr" secondAttribute="bottom" constant="60" id="SbN-VI-TEc"/>
-                            <constraint firstItem="aHW-lr-6pr" firstAttribute="top" secondItem="vbg-je-IdS" secondAttribute="bottom" constant="60" id="VEC-Vs-gTs"/>
+                            <constraint firstItem="aHW-lr-6pr" firstAttribute="top" secondItem="vbg-je-IdS" secondAttribute="bottom" constant="56" id="VEC-Vs-gTs"/>
                             <constraint firstItem="XN2-W1-DfP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VGB-aA-CrD"/>
                             <constraint firstItem="aHW-lr-6pr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XrR-8V-uTP"/>
                             <constraint firstItem="znv-gQ-gRB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YFN-XP-cH6"/>
@@ -408,15 +473,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cp9-fa-7RI">
-                                <rect key="frame" x="90" y="44" width="232" height="106"/>
+                                <rect key="frame" x="96" y="44" width="226" height="106"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahu-9b-x5g">
                                         <rect key="frame" x="8" y="8" width="115" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="115" id="NO9-A7-JAX"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="7"/>
+                                        <color key="textColor" red="0.36862745099999999" green="0.3921568627" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ery-Kk-HJz">
@@ -430,7 +495,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.84119816629999999" green="0.72621955569999996" blue="0.58595458040000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.95294117649999999" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="Ahu-9b-x5g" firstAttribute="leading" secondItem="Cp9-fa-7RI" secondAttribute="leading" constant="8" id="F9z-Sc-itp"/>
                                     <constraint firstAttribute="height" constant="106" id="Mny-qc-Sdz"/>
@@ -450,7 +515,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.427769438" green="0.32221431769999997" blue="0.19971672469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.68235294120000001" green="0.85098039219999999" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="225" id="CTW-W9-hGL"/>
                                     <constraint firstAttribute="height" constant="375" id="dcC-1R-4Z3"/>
@@ -461,12 +526,12 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrW-N6-QN6">
                                         <rect key="frame" x="0.0" y="0.0" width="222" height="25"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.84119816629999999" green="0.72621955569999996" blue="0.58595458040000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.95294117649999999" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="AL5-FQ-4aB"/>
                                     <constraint firstAttribute="trailing" secondItem="xrW-N6-QN6" secondAttribute="trailing" id="GrY-ut-pkR"/>
@@ -490,25 +555,25 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zhG-fB-h71">
                                 <rect key="frame" x="5" y="158" width="85" height="242"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Their Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zC-ax-Pt6">
-                                        <rect key="frame" x="4" y="12.5" width="78" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Their Score" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zC-ax-Pt6">
+                                        <rect key="frame" x="4" y="12.5" width="78" height="36"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="eoj-nR-Ndy"/>
-                                            <constraint firstAttribute="height" constant="18" id="vkD-SO-EMI"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="eoj-nR-Ndy"/>
+                                            <constraint firstAttribute="height" constant="36" id="vkD-SO-EMI"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="7"/>
+                                        <color key="textColor" red="0.36862745099999999" green="0.3921568627" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8T-Ld-F7L">
-                                        <rect key="frame" x="8" y="45" width="68" height="48"/>
+                                        <rect key="frame" x="8" y="63" width="68" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gnf-1v-iQE">
                                         <rect key="frame" x="0.0" y="116.5" width="85" height="9"/>
-                                        <color key="backgroundColor" red="0.427769438" green="0.32221431769999997" blue="0.19971672469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.36862745099999999" green="0.3921568627" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="9" id="gB1-ia-ZI1"/>
                                         </constraints>
@@ -524,12 +589,12 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="18" id="soE-8P-SIv"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="7"/>
+                                        <color key="textColor" red="0.36862745099999999" green="0.3921568627" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.84119816629999999" green="0.72621955569999996" blue="0.58595458040000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.95294117649999999" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Stm-No-9YZ" secondAttribute="bottom" constant="22" id="1AZ-ie-Mmn"/>
                                     <constraint firstItem="3zC-ax-Pt6" firstAttribute="top" secondItem="zhG-fB-h71" secondAttribute="top" constant="12.5" id="2sf-gk-com"/>
@@ -558,28 +623,29 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31I-p9-TnK">
                                 <rect key="frame" x="0.0" y="562" width="412" height="300"/>
-                                <color key="backgroundColor" red="0.427769438" green="0.32221431769999997" blue="0.19971672469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.68235294120000001" green="0.85098039219999999" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <button opaque="NO" userInteractionEnabled="NO" alpha="0.0" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7LB-uX-2Ke">
                                 <rect key="frame" x="130" y="675" width="152" height="68"/>
-                                <color key="backgroundColor" red="0.84119816629999999" green="0.72621955569999996" blue="0.58595458040000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.95294117649999999" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="152" id="lWk-Ci-STa"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="9"/>
                                 <state key="normal" title="View End Screen">
-                                    <color key="titleColor" red="0.427769438" green="0.32221431769999997" blue="0.19971672469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.36862745099999999" green="0.3921568627" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <segue destination="aQm-2l-gXK" kind="showDetail" identifier="EndScreen" id="mEz-M7-v75"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvi-Sw-DfY">
-                                <rect key="frame" x="28" y="44" width="30" height="30"/>
+                                <rect key="frame" x="20" y="44" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Srf-ID-kku"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="ZHt-bS-58P"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="ZHt-bS-58P"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="9"/>
                                 <state key="normal" title="Exit">
                                     <color key="titleColor" red="0.69346098760662955" green="0.22685833768052599" blue="0.18134713012024317" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -596,8 +662,8 @@
                                             <constraint firstAttribute="height" constant="59" id="GAa-RQ-vel"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="71" id="Isa-rf-6FX"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="10"/>
+                                        <color key="textColor" red="0.36862745099999999" green="0.3921568627" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVH-eT-GLO">
@@ -607,7 +673,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.84119816629999999" green="0.72621955569999996" blue="0.58595458040000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.95294117649999999" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="JVH-eT-GLO" firstAttribute="leading" secondItem="VWe-Rj-KV8" secondAttribute="leading" constant="5" id="257-jr-jsh"/>
                                     <constraint firstItem="oC6-JD-KUj" firstAttribute="leading" secondItem="VWe-Rj-KV8" secondAttribute="leading" constant="5" id="S9A-dW-3vR"/>
@@ -625,11 +691,11 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.68044098980000001" green="0.56693819759999997" blue="0.3818939187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.36862745099999999" green="0.3921568627" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="OOt-cq-JOR" firstAttribute="centerX" secondItem="vfm-Xm-gGR" secondAttribute="centerX" id="0Pr-Tj-AwX"/>
                             <constraint firstItem="6vr-hX-61U" firstAttribute="bottom" secondItem="7LB-uX-2Ke" secondAttribute="bottom" constant="119" id="5NH-6n-dc9"/>
-                            <constraint firstItem="uvi-Sw-DfY" firstAttribute="leading" secondItem="6vr-hX-61U" secondAttribute="leading" constant="28" id="6B2-eh-wvu"/>
+                            <constraint firstItem="uvi-Sw-DfY" firstAttribute="leading" secondItem="6vr-hX-61U" secondAttribute="leading" constant="20" id="6B2-eh-wvu"/>
                             <constraint firstItem="31I-p9-TnK" firstAttribute="leading" secondItem="6vr-hX-61U" secondAttribute="leading" id="7EH-WE-qc0"/>
                             <constraint firstItem="VWe-Rj-KV8" firstAttribute="leading" secondItem="OOt-cq-JOR" secondAttribute="trailing" constant="5" id="7TI-ss-Lgd"/>
                             <constraint firstItem="VWe-Rj-KV8" firstAttribute="top" secondItem="6vr-hX-61U" secondAttribute="top" constant="185" id="Akc-hr-lRD"/>
@@ -653,7 +719,7 @@
                             <constraint firstAttribute="bottom" secondItem="zhG-fB-h71" secondAttribute="bottom" constant="496" id="ouD-pZ-CL0"/>
                             <constraint firstItem="F6M-dV-yA6" firstAttribute="top" secondItem="OOt-cq-JOR" secondAttribute="bottom" constant="2" id="qJb-qA-dPP"/>
                             <constraint firstItem="OOt-cq-JOR" firstAttribute="top" secondItem="Cp9-fa-7RI" secondAttribute="bottom" constant="8" id="qag-Ji-TH5"/>
-                            <constraint firstItem="Cp9-fa-7RI" firstAttribute="leading" secondItem="uvi-Sw-DfY" secondAttribute="trailing" constant="32" id="yhe-PM-453"/>
+                            <constraint firstItem="Cp9-fa-7RI" firstAttribute="leading" secondItem="uvi-Sw-DfY" secondAttribute="trailing" constant="30" id="yhe-PM-453"/>
                             <constraint firstItem="6vr-hX-61U" firstAttribute="trailing" secondItem="F6M-dV-yA6" secondAttribute="trailing" constant="95" id="z54-U4-rvR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6vr-hX-61U"/>
@@ -685,10 +751,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfp-2c-Ndi">
-                                <rect key="frame" x="30" y="44" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfp-2c-Ndi">
+                                <rect key="frame" x="28" y="51" width="36" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="eRh-rh-svZ"/>
+                                    <constraint firstAttribute="height" constant="24" id="ygC-OI-rgU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="9"/>
                                 <state key="normal" title="Exit">
                                     <color key="titleColor" red="0.69346098759999997" green="0.2268583377" blue="0.1813471301" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -696,31 +765,22 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="rGW-XV-DPK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WN0-Gd-cjw">
-                                <rect key="frame" x="122" y="91" width="171" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WN0-Gd-cjw">
+                                <rect key="frame" x="101" y="89" width="212" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="ZfN-e6-GYX"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="212" id="egR-zS-5Nz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Scored:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaY-EJ-zFz">
-                                <rect key="frame" x="97" y="232" width="93" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Biggest Sandwich:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QC3-ZW-z0j">
-                                <rect key="frame" x="136" y="363" width="142" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EpN-F1-Z3a">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EpN-F1-Z3a">
                                 <rect key="frame" x="0.0" y="426" width="414" height="436"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.68044098980000001" green="0.56693819759999997" blue="0.3818939187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.36862745099999999" green="0.3921568627" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EpN-F1-Z3a" secondAttribute="height" multiplier="207:218" id="7Dg-Yg-q3C"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="card" rowHeight="75" id="8ZU-7n-c0y" customClass="CardTableViewCell" customModule="Slamwich" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="75"/>
@@ -729,25 +789,42 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mw3-8c-yHE">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mw3-8c-yHE">
                                                     <rect key="frame" x="0.0" y="0.0" width="25" height="75"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="Cb5-vi-ka8"/>
+                                                    </constraints>
                                                 </view>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jad-1u-dfm">
-                                                    <rect key="frame" x="33" y="6" width="65" height="65"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jad-1u-dfm">
+                                                    <rect key="frame" x="33" y="5" width="65" height="65"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="jad-1u-dfm" secondAttribute="height" multiplier="1:1" id="xh6-pJ-H9C"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Card Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffW-tO-P2z">
-                                                    <rect key="frame" x="168" y="27" width="175" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffW-tO-P2z">
+                                                    <rect key="frame" x="123" y="29" width="221" height="17.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="17.5" id="JCf-87-PFJ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jad-1u-dfm" firstAttribute="centerY" secondItem="gh1-t3-guh" secondAttribute="centerY" id="5lb-0z-f4u"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ffW-tO-P2z" secondAttribute="trailing" constant="50" id="BmO-m1-2V6"/>
+                                                <constraint firstAttribute="bottom" secondItem="Mw3-8c-yHE" secondAttribute="bottom" id="Qex-Qg-8am"/>
+                                                <constraint firstItem="ffW-tO-P2z" firstAttribute="centerY" secondItem="gh1-t3-guh" secondAttribute="centerY" id="SYD-J5-ngU"/>
+                                                <constraint firstItem="Mw3-8c-yHE" firstAttribute="top" secondItem="gh1-t3-guh" secondAttribute="top" id="ZZs-QI-ona"/>
+                                                <constraint firstItem="Mw3-8c-yHE" firstAttribute="leading" secondItem="gh1-t3-guh" secondAttribute="leading" id="eFW-sU-j5W"/>
+                                                <constraint firstItem="jad-1u-dfm" firstAttribute="leading" secondItem="Mw3-8c-yHE" secondAttribute="trailing" constant="8" id="eTi-sM-fcg"/>
+                                                <constraint firstItem="ffW-tO-P2z" firstAttribute="leading" secondItem="jad-1u-dfm" secondAttribute="trailing" constant="25" id="okK-Ax-beE"/>
+                                                <constraint firstItem="jad-1u-dfm" firstAttribute="top" secondItem="gh1-t3-guh" secondAttribute="top" constant="5" id="uBN-4Y-Rxv"/>
+                                            </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.84119816629999999" green="0.72621955569999996" blue="0.58595458040000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.68235294120000001" green="0.85098039219999999" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="cardImg" destination="jad-1u-dfm" id="YD6-ll-Vxh"/>
                                             <outlet property="cardName" destination="ffW-tO-P2z" id="i0d-zL-h5H"/>
@@ -756,29 +833,116 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aA-n5-J4R">
-                                <rect key="frame" x="251" y="232" width="45" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-Bq-TbM">
-                                <rect key="frame" x="251" y="276" width="45" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Against:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LH4-EX-fH2">
-                                <rect key="frame" x="112" y="276" width="62" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5NV-HP-bn2">
+                                <rect key="frame" x="0.0" y="147" width="414" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Scored:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaY-EJ-zFz">
+                                        <rect key="frame" x="50" y="24" width="143" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="143" id="Jtw-Wt-8tB"/>
+                                            <constraint firstAttribute="height" constant="17" id="fXu-9y-3Im"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aA-n5-J4R">
+                                        <rect key="frame" x="299" y="22" width="45" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="fFE-Y1-ccd"/>
+                                            <constraint firstAttribute="height" constant="21" id="usr-bb-6Ek"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.95294117649999999" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7aA-n5-J4R" secondAttribute="trailing" constant="70" id="Af2-Yt-TwE"/>
+                                    <constraint firstItem="7aA-n5-J4R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JaY-EJ-zFz" secondAttribute="trailing" constant="8" symbolic="YES" id="PyP-Dc-z6y"/>
+                                    <constraint firstAttribute="height" constant="65" id="Tll-TE-7QD"/>
+                                    <constraint firstItem="JaY-EJ-zFz" firstAttribute="leading" secondItem="5NV-HP-bn2" secondAttribute="leading" constant="50" id="ZHJ-iy-KdH"/>
+                                    <constraint firstItem="7aA-n5-J4R" firstAttribute="centerY" secondItem="5NV-HP-bn2" secondAttribute="centerY" id="hpk-du-mzS"/>
+                                    <constraint firstItem="JaY-EJ-zFz" firstAttribute="centerY" secondItem="5NV-HP-bn2" secondAttribute="centerY" id="mNT-Zg-BJC"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JgH-Nv-htO">
+                                <rect key="frame" x="0.0" y="217" width="414" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-Bq-TbM">
+                                        <rect key="frame" x="299" y="22" width="45" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="C2g-zh-Dnn"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="KjC-5y-Jf8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Against:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LH4-EX-fH2">
+                                        <rect key="frame" x="72" y="24" width="104" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="104" id="4B3-5G-smi"/>
+                                            <constraint firstAttribute="height" constant="17" id="Hk4-DQ-3lT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.68235294120000001" green="0.85098039219999999" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="LH4-EX-fH2" firstAttribute="leading" secondItem="JgH-Nv-htO" secondAttribute="leading" constant="72" id="98e-hN-oQz"/>
+                                    <constraint firstItem="LH4-EX-fH2" firstAttribute="centerY" secondItem="JgH-Nv-htO" secondAttribute="centerY" id="EH8-AT-jyL"/>
+                                    <constraint firstItem="y1d-Bq-TbM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LH4-EX-fH2" secondAttribute="trailing" constant="8" symbolic="YES" id="Jz5-Hl-WxW"/>
+                                    <constraint firstAttribute="trailing" secondItem="y1d-Bq-TbM" secondAttribute="trailing" constant="70" id="e07-H1-Vzn"/>
+                                    <constraint firstAttribute="height" constant="65" id="phA-88-woK"/>
+                                    <constraint firstItem="y1d-Bq-TbM" firstAttribute="centerY" secondItem="JgH-Nv-htO" secondAttribute="centerY" id="ve9-Gx-sDA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0F-RH-BOQ">
+                                <rect key="frame" x="0.0" y="361" width="414" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biggest Sandwich:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QC3-ZW-z0j">
+                                        <rect key="frame" x="96.5" y="24" width="221" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="221" id="fuE-7m-Hjv"/>
+                                            <constraint firstAttribute="height" constant="17" id="k7A-Yi-d3f"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.72156862749999995" green="0.94901960780000005" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="QC3-ZW-z0j" firstAttribute="centerY" secondItem="S0F-RH-BOQ" secondAttribute="centerY" id="ELa-6j-4Nu"/>
+                                    <constraint firstAttribute="height" constant="65" id="bTm-DY-EXm"/>
+                                    <constraint firstItem="QC3-ZW-z0j" firstAttribute="centerX" secondItem="S0F-RH-BOQ" secondAttribute="centerX" id="c0m-6g-26M"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.68044098980000001" green="0.56693819759999997" blue="0.3818939187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.36862745099999999" green="0.3921568627" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="EpN-F1-Z3a" firstAttribute="trailing" secondItem="EsW-vo-Iye" secondAttribute="trailing" id="1Rt-OB-838"/>
+                            <constraint firstItem="EpN-F1-Z3a" firstAttribute="top" secondItem="S0F-RH-BOQ" secondAttribute="bottom" id="3Uj-i1-d8u"/>
+                            <constraint firstItem="5NV-HP-bn2" firstAttribute="leading" secondItem="EsW-vo-Iye" secondAttribute="leading" id="CU1-R7-uks"/>
+                            <constraint firstItem="WN0-Gd-cjw" firstAttribute="centerX" secondItem="4m7-y6-1Uh" secondAttribute="centerX" id="DqF-nt-vnf"/>
+                            <constraint firstItem="S0F-RH-BOQ" firstAttribute="leading" secondItem="EsW-vo-Iye" secondAttribute="leading" id="DxQ-eq-6ec"/>
+                            <constraint firstItem="WN0-Gd-cjw" firstAttribute="top" secondItem="EsW-vo-Iye" secondAttribute="top" constant="45" id="Hhn-I1-obO"/>
+                            <constraint firstItem="5NV-HP-bn2" firstAttribute="top" secondItem="WN0-Gd-cjw" secondAttribute="bottom" constant="26" id="MJt-B3-OxE"/>
+                            <constraint firstItem="Rfp-2c-Ndi" firstAttribute="top" secondItem="EsW-vo-Iye" secondAttribute="top" constant="7" id="Nlr-7k-dYr"/>
+                            <constraint firstItem="JgH-Nv-htO" firstAttribute="leading" secondItem="EsW-vo-Iye" secondAttribute="leading" id="Xxl-Xb-ABs"/>
+                            <constraint firstItem="5NV-HP-bn2" firstAttribute="trailing" secondItem="EsW-vo-Iye" secondAttribute="trailing" id="hz7-Sn-fv0"/>
+                            <constraint firstItem="EsW-vo-Iye" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Rfp-2c-Ndi" secondAttribute="trailing" symbolic="YES" id="j8M-ZS-ENo"/>
+                            <constraint firstItem="JgH-Nv-htO" firstAttribute="trailing" secondItem="EsW-vo-Iye" secondAttribute="trailing" id="jfO-Jb-Uc5"/>
+                            <constraint firstItem="S0F-RH-BOQ" firstAttribute="trailing" secondItem="EsW-vo-Iye" secondAttribute="trailing" id="n5D-IE-TKO"/>
+                            <constraint firstItem="JgH-Nv-htO" firstAttribute="top" secondItem="5NV-HP-bn2" secondAttribute="bottom" constant="5" id="o9r-18-Pnb"/>
+                            <constraint firstItem="Rfp-2c-Ndi" firstAttribute="leading" secondItem="EsW-vo-Iye" secondAttribute="leading" constant="28" id="smt-ju-Kap"/>
+                            <constraint firstItem="EpN-F1-Z3a" firstAttribute="leading" secondItem="EsW-vo-Iye" secondAttribute="leading" id="tqO-xX-2DE"/>
+                            <constraint firstItem="EpN-F1-Z3a" firstAttribute="bottom" secondItem="EsW-vo-Iye" secondAttribute="bottom" id="zPB-QX-Xrp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EsW-vo-Iye"/>
                     </view>
                     <connections>

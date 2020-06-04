@@ -39,7 +39,7 @@ class MatchViewController: UIViewController {
             }
         }
     }
-    let winningPoints = 1.0
+    let winningPoints = 100.0
     var emitter: CAEmitterLayer!
     
     var myHand = [Card]()

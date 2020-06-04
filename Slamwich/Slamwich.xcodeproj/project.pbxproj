@@ -20,6 +20,7 @@
 		C8472173242973220019520C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8472171242973220019520C /* Main.storyboard */; };
 		C8472175242973240019520C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8472174242973240019520C /* Assets.xcassets */; };
 		C8472178242973240019520C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8472176242973240019520C /* LaunchScreen.storyboard */; };
+		C87D0EE324897060008B867F /* Emulogic-zrEw.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C87D0EE224896FB9008B867F /* Emulogic-zrEw.ttf */; };
 		C8B633DE24774EF8003B3DE8 /* LocalGameFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B633DD24774EF8003B3DE8 /* LocalGameFunctions.swift */; };
 		C8B633E224775CBC003B3DE8 /* cards.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8B633E124775CBC003B3DE8 /* cards.plist */; };
 		C8B633E424789575003B3DE8 /* AI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B633E324789575003B3DE8 /* AI.swift */; };
@@ -52,6 +53,8 @@
 		C8472174242973240019520C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8472177242973240019520C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8472179242973240019520C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C87D0EE124896F51008B867F /* 04B_30__.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = 04B_30__.TTF; sourceTree = "<group>"; };
+		C87D0EE224896FB9008B867F /* Emulogic-zrEw.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Emulogic-zrEw.ttf"; sourceTree = "<group>"; };
 		C8B633DD24774EF8003B3DE8 /* LocalGameFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalGameFunctions.swift; sourceTree = "<group>"; };
 		C8B633E124775CBC003B3DE8 /* cards.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = cards.plist; path = ../../cards.plist; sourceTree = "<group>"; };
 		C8B633E324789575003B3DE8 /* AI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AI.swift; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				C8F8F3E224874DFB0045325B /* SettingsViewController.swift */,
 				C817DF522454094F00361786 /* WaitingScreenViewController.swift */,
 				C8472174242973240019520C /* Assets.xcassets */,
+				C87D0EE124896F51008B867F /* 04B_30__.TTF */,
+				C87D0EE224896FB9008B867F /* Emulogic-zrEw.ttf */,
 				C8472171242973220019520C /* Main.storyboard */,
 				C827EE1F243811F9008FE072 /* CardView.xib */,
 				C8472176242973240019520C /* LaunchScreen.storyboard */,
@@ -206,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8F8F3ED24888D3A0045325B /* Settings.bundle in Resources */,
+				C87D0EE324897060008B867F /* Emulogic-zrEw.ttf in Resources */,
 				C8B633E224775CBC003B3DE8 /* cards.plist in Resources */,
 				C8472178242973240019520C /* LaunchScreen.storyboard in Resources */,
 				C8472175242973240019520C /* Assets.xcassets in Resources */,
