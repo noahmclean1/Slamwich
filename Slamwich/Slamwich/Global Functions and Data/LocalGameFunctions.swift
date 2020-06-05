@@ -9,15 +9,15 @@
 import Foundation
 
 // MARK: - Constants
+// In a deck of 100 cards, specify the ratio of types
 let typeRatio = ["bread":30,
-                 "cheese":15,
+                 "cheese":17,
                  "meat":20,
-                 "veggie":15,
-                 "condiment":8,
-                 "fruit":6,
-                 "other":6]
+                 "veggie":16,
+                 "condiment":11,
+                 "fruit":6]
 
-// All cards defined for the game
+// All cards defined for the game (by type for ratio purposes)
 var cards: NSDictionary?
 
 // All combos defined for the game
@@ -73,7 +73,7 @@ func readInCards() {
             
         }
     }
-    print("ERROR: readInCards")
+    print("ERROR: readInCards failed")
 }
 
 // Generate 1 card randomly
@@ -82,18 +82,22 @@ func generateCard(fromType type: String) -> Card? {
     let cardsInType = cs[type] as! [NSDictionary]
     let selectedCard = cardsInType.randomElement()!
 
+    // If this fails, there is a serious problem with our cards.plist
     return try? Card(fromDictionary: selectedCard, withType: type)
 }
 
 
 // MARK: - Combo Functions
 
+// Read in all combos from combos.plist into memory
 func readInCombos() {
     var compiledList = [Combo]()
     if let path = Bundle.main.path(forResource: "combos", ofType: "plist") {
         if let cs = NSMutableDictionary(contentsOfFile: path) {
             for (name, vals) in cs {
                 if let dic = vals as? NSDictionary {
+                    
+                    // The heavy-lifting is done by the Combo intializer
                     if let newCombo = try? Combo(fromDictionary: dic, withName: name as! String) {
                         compiledList.append(newCombo)
                     }
@@ -104,9 +108,12 @@ func readInCombos() {
     }
 }
 
+// Helper function that determines whether a combo applies to a sandwich
 func comboIsValid(_ combo: Combo, sandwich: [Card]) -> Bool {
     // Tally up the requirements
     var cardsAndTypes = [String: Int]()
+    
+    // Card reqs
     for cardName in combo.cards {
         if let number = cardsAndTypes[cardName]{
             cardsAndTypes[cardName] = number + 1
@@ -115,6 +122,8 @@ func comboIsValid(_ combo: Combo, sandwich: [Card]) -> Bool {
             cardsAndTypes[cardName] = 1
         }
     }
+    
+    // Type reqs
     for typeName in combo.types {
         if let number = cardsAndTypes[typeName] {
             cardsAndTypes[typeName] = number + 1
@@ -124,7 +133,7 @@ func comboIsValid(_ combo: Combo, sandwich: [Card]) -> Bool {
         }
     }
     
-    // Traverse the sandwich
+    // Traverse the sandwich, using a dictionary to log cards
     for card in sandwich {
         if let num = cardsAndTypes[card.name] {
             cardsAndTypes[card.name] = max(num-1, 0)
@@ -143,6 +152,7 @@ func comboIsValid(_ combo: Combo, sandwich: [Card]) -> Bool {
     return true
 }
 
+// Given a combo, sandwich, and a sandwich-length list of multiplier numbers, apply the combo to the relevant cards' multipliers
 func applyCombo(_ combo: Combo, sandwich: [Card], multipliers mults: inout [Double]) {
     // Tally up the bonuses
     var cardsAndTypes = [String: Int]()
@@ -163,7 +173,7 @@ func applyCombo(_ combo: Combo, sandwich: [Card], multipliers mults: inout [Doub
         }
     }
     
-    // Apply the bonuses
+    // Apply the bonuses to the relevant cards
     for (i, card) in sandwich.enumerated() {
         if let num = cardsAndTypes[card.name] {
             cardsAndTypes[card.name] = max(num-1, 0)
@@ -182,6 +192,8 @@ func newCombosFrom(_ sandwich: [Card], newCard card: Card, _ currentCombos: [Com
         var newCombos = [Combo]()
         let newSandwich = sandwich + [card]
         for c in cs {
+            
+            // Ignore combos that are already logged
             if !currentCombos.contains(c) {
                 if comboIsValid(c, sandwich: newSandwich) {
                     newCombos.append(c)
@@ -194,6 +206,7 @@ func newCombosFrom(_ sandwich: [Card], newCard card: Card, _ currentCombos: [Com
     return []
 }
 
+// String-ify a list of combos for hovering display
 func combosToString(_ combos: [Combo]) -> String {
     var str = ""
     if combos.count == 0 {
@@ -208,8 +221,8 @@ func combosToString(_ combos: [Combo]) -> String {
 // MARK: - Hand Functions
 
 // If there's no bread active, check if the game is playable
+// If we know the game is not playable we gift a free bread to make it fine
 func isGameStuck(hand: [Card]) -> Bool {
-    //print(hand)
     for card in hand {
         if card.type == "bread" {
             return false
@@ -221,6 +234,7 @@ func isGameStuck(hand: [Card]) -> Bool {
 
 // MARK: - Gameplay Functions
 
+// Used by player and AI to legalize moves
 func validPlay(card: Card, sandwich: [Card]) -> Bool {
     if sandwich.isEmpty && card.type != "bread" {
         return false
@@ -228,6 +242,7 @@ func validPlay(card: Card, sandwich: [Card]) -> Bool {
     return true
 }
 
+// Used for free bread at the start & when stuck (no sandwich and no bread in hand)
 func generateBread() -> Card {
     if cards == nil {
         readInCards()
@@ -239,6 +254,7 @@ func generateBread() -> Card {
     return try! Card(fromDictionary: card, withType: "bread")
 }
 
+// Helper function to always know what the sandwich is worth
 func scoreSandwich(_ sandwich: [Card]) -> (Double,[Combo]) {
     // Tally up each applicable combo & aggregate the multipliers
     var multipliers = [Double](repeating: 1.0, count: sandwich.count)

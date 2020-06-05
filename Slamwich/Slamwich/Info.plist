@@ -4,7 +4,6 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>04b_30__.TTF</string>
 		<string>Emulogic-zrEw.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>

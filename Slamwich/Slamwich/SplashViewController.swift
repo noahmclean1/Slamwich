@@ -10,6 +10,12 @@ import UIKit
 
 class SplashViewController: UIViewController {
 
+    /*
+    SplashViewController
+    ------------
+    Really just a cute splash screen
+    */
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

@@ -11,6 +11,16 @@ import FirebaseDatabase
 
 class GameManager {
     
+    /*
+    GameManager
+    ------------
+    A global static class that keeps & manages multiplayer game information
+     Also handles all multiplayer interfacing
+    */
+    
+    // NOTE: This is all Firebase multiplayer code currently not in use
+    /// Patch 1.0
+    
     public static let global = GameManager()
     let ref = Database.database().reference()
     

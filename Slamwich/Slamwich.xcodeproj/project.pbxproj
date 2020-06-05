@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C817DF512453C0C200361786 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C817DF502453C0C200361786 /* GameManager.swift */; };
-		C817DF532454094F00361786 /* WaitingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C817DF522454094F00361786 /* WaitingScreenViewController.swift */; };
 		C817DF55245508A100361786 /* GameDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C817DF54245508A100361786 /* GameDataTypes.swift */; };
 		C817DF5B245550A400361786 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C817DF5A245550A400361786 /* MatchViewController.swift */; };
 		C827EE1E2436A796008FE072 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C827EE1D2436A796008FE072 /* CardView.swift */; };
@@ -21,6 +20,8 @@
 		C8472175242973240019520C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8472174242973240019520C /* Assets.xcassets */; };
 		C8472178242973240019520C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8472176242973240019520C /* LaunchScreen.storyboard */; };
 		C87D0EE324897060008B867F /* Emulogic-zrEw.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C87D0EE224896FB9008B867F /* Emulogic-zrEw.ttf */; };
+		C87D0EE52489BB3A008B867F /* MatchGameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87D0EE42489BB3A008B867F /* MatchGameplay.swift */; };
+		C87D0EE82489BB9C008B867F /* MatchAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87D0EE72489BB9C008B867F /* MatchAnimations.swift */; };
 		C8B633DE24774EF8003B3DE8 /* LocalGameFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B633DD24774EF8003B3DE8 /* LocalGameFunctions.swift */; };
 		C8B633E224775CBC003B3DE8 /* cards.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8B633E124775CBC003B3DE8 /* cards.plist */; };
 		C8B633E424789575003B3DE8 /* AI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B633E324789575003B3DE8 /* AI.swift */; };
@@ -39,7 +40,6 @@
 		B29FDB8E3FD01EAC58BD844D /* Pods_Slamwich.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Slamwich.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDBC7DAFB3DE14123F6C4B1 /* Pods-Slamwich.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Slamwich.release.xcconfig"; path = "Target Support Files/Pods-Slamwich/Pods-Slamwich.release.xcconfig"; sourceTree = "<group>"; };
 		C817DF502453C0C200361786 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
-		C817DF522454094F00361786 /* WaitingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingScreenViewController.swift; sourceTree = "<group>"; };
 		C817DF54245508A100361786 /* GameDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataTypes.swift; sourceTree = "<group>"; };
 		C817DF5A245550A400361786 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		C827EE1D2436A796008FE072 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -53,12 +53,13 @@
 		C8472174242973240019520C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8472177242973240019520C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8472179242973240019520C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C87D0EE124896F51008B867F /* 04B_30__.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = 04B_30__.TTF; sourceTree = "<group>"; };
 		C87D0EE224896FB9008B867F /* Emulogic-zrEw.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Emulogic-zrEw.ttf"; sourceTree = "<group>"; };
+		C87D0EE42489BB3A008B867F /* MatchGameplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchGameplay.swift; sourceTree = "<group>"; };
+		C87D0EE72489BB9C008B867F /* MatchAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchAnimations.swift; sourceTree = "<group>"; };
 		C8B633DD24774EF8003B3DE8 /* LocalGameFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalGameFunctions.swift; sourceTree = "<group>"; };
 		C8B633E124775CBC003B3DE8 /* cards.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = cards.plist; path = ../../cards.plist; sourceTree = "<group>"; };
 		C8B633E324789575003B3DE8 /* AI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AI.swift; sourceTree = "<group>"; };
-		C8B633E62479CDEC003B3DE8 /* combos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = combos.plist; path = ../../combos.plist; sourceTree = "<group>"; };
+		C8B633E62479CDEC003B3DE8 /* combos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = combos.plist; sourceTree = "<group>"; };
 		C8F8F3E02487385A0045325B /* EndScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScreenViewController.swift; sourceTree = "<group>"; };
 		C8F8F3E224874DFB0045325B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C8F8F3E424874E470045325B /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
@@ -115,20 +116,16 @@
 				C847216D242973220019520C /* SceneDelegate.swift */,
 				C827EE1D2436A796008FE072 /* CardView.swift */,
 				C847216F242973220019520C /* MainPlayerViewController.swift */,
-				C817DF502453C0C200361786 /* GameManager.swift */,
-				C8B633E324789575003B3DE8 /* AI.swift */,
-				C8B633DD24774EF8003B3DE8 /* LocalGameFunctions.swift */,
-				C817DF54245508A100361786 /* GameDataTypes.swift */,
-				C817DF5A245550A400361786 /* MatchViewController.swift */,
+				C87D0EE62489BB77008B867F /* Match ViewController */,
 				C8F8F3EA24886A500045325B /* SplashViewController.swift */,
 				C8F8F3E02487385A0045325B /* EndScreenViewController.swift */,
 				C8F8F3E424874E470045325B /* InstructionsViewController.swift */,
 				C8F8F3E6248823A10045325B /* CardTableViewCell.swift */,
 				C8F8F3E824884CD40045325B /* ComboTableViewCell.swift */,
 				C8F8F3E224874DFB0045325B /* SettingsViewController.swift */,
-				C817DF522454094F00361786 /* WaitingScreenViewController.swift */,
+				C87D0EE92489C1CF008B867F /* Firebase Code */,
+				C87D0EEA2489C1F4008B867F /* Global Functions and Data */,
 				C8472174242973240019520C /* Assets.xcassets */,
-				C87D0EE124896F51008B867F /* 04B_30__.TTF */,
 				C87D0EE224896FB9008B867F /* Emulogic-zrEw.ttf */,
 				C8472171242973220019520C /* Main.storyboard */,
 				C827EE1F243811F9008FE072 /* CardView.xib */,
@@ -140,6 +137,34 @@
 				C841774A244FDB6C00C2E83F /* GoogleService-Info.plist */,
 			);
 			path = Slamwich;
+			sourceTree = "<group>";
+		};
+		C87D0EE62489BB77008B867F /* Match ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C817DF5A245550A400361786 /* MatchViewController.swift */,
+				C87D0EE72489BB9C008B867F /* MatchAnimations.swift */,
+				C87D0EE42489BB3A008B867F /* MatchGameplay.swift */,
+			);
+			path = "Match ViewController";
+			sourceTree = "<group>";
+		};
+		C87D0EE92489C1CF008B867F /* Firebase Code */ = {
+			isa = PBXGroup;
+			children = (
+				C817DF502453C0C200361786 /* GameManager.swift */,
+			);
+			path = "Firebase Code";
+			sourceTree = "<group>";
+		};
+		C87D0EEA2489C1F4008B867F /* Global Functions and Data */ = {
+			isa = PBXGroup;
+			children = (
+				C8B633E324789575003B3DE8 /* AI.swift */,
+				C817DF54245508A100361786 /* GameDataTypes.swift */,
+				C8B633DD24774EF8003B3DE8 /* LocalGameFunctions.swift */,
+			);
+			path = "Global Functions and Data";
 			sourceTree = "<group>";
 		};
 		DA90851F5B808B8025290F3E /* Frameworks */ = {
@@ -281,9 +306,10 @@
 				C8B633DE24774EF8003B3DE8 /* LocalGameFunctions.swift in Sources */,
 				C8F8F3E12487385A0045325B /* EndScreenViewController.swift in Sources */,
 				C817DF55245508A100361786 /* GameDataTypes.swift in Sources */,
-				C817DF532454094F00361786 /* WaitingScreenViewController.swift in Sources */,
+				C87D0EE52489BB3A008B867F /* MatchGameplay.swift in Sources */,
 				C847216E242973220019520C /* SceneDelegate.swift in Sources */,
 				C8F8F3E524874E470045325B /* InstructionsViewController.swift in Sources */,
+				C87D0EE82489BB9C008B867F /* MatchAnimations.swift in Sources */,
 				C8F8F3E324874DFB0045325B /* SettingsViewController.swift in Sources */,
 				C8F8F3E7248823A10045325B /* CardTableViewCell.swift in Sources */,
 				C8F8F3EB24886A500045325B /* SplashViewController.swift in Sources */,

@@ -10,6 +10,12 @@ import UIKit
 
 class InstructionsViewController: UIViewController {
 
+    /*
+    InstructionsViewController
+    ------------
+    Shows how to play the game
+    */
+    
     @IBOutlet weak var mainInstructions: UITextView!
     @IBOutlet weak var comboTable: UITableView!
     
@@ -51,6 +57,7 @@ class InstructionsViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+    // Handy function to show combo info
     func describeCombo(_ combo: Combo) {
         comboName.text = combo.name
         valueLabel.text = "x\(combo.multiplier)"
@@ -58,6 +65,7 @@ class InstructionsViewController: UIViewController {
         typesList.text = listToString(combo.types)
     }
     
+    // Helper to display listed info
     func listToString(_ list: [String]) -> String {
         let cnt = list.count
         var combined = ""

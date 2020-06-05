@@ -199,6 +199,15 @@
 			<key>value</key>
 			<string>1</string>
 		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Peanut_Butter</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
 	</array>
 	<key>fruit</key>
 	<array>
@@ -312,18 +321,6 @@
 			<string>Ground_Beef</string>
 			<key>value</key>
 			<string>1.5</string>
-		</dict>
-	</array>
-	<key>other</key>
-	<array>
-		<dict>
-			<key>flavor</key>
-			<string>""
-</string>
-			<key>name</key>
-			<string>Peanut_Butter</string>
-			<key>value</key>
-			<string>1</string>
 		</dict>
 	</array>
 	<key>veggie</key>

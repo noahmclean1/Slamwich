@@ -9,12 +9,14 @@
 import Foundation
 import Firebase
 
+// Will be used for Firebase
 struct PlayerData: Codable {
     let id: String
     let name: String
     var score: Int
 }
 
+// Card representation for playing
 struct Card: Codable {
     let name: String
     let value: Double
@@ -34,6 +36,7 @@ struct Card: Codable {
     }
 }
 
+// Combo representation for playing
 struct Combo: Equatable {
     let name: String
     let multiplier: Double
@@ -71,11 +74,13 @@ struct Combo: Equatable {
     }
 }
 
+// Will be used in Firebase
 struct Turn: Codable{
     let taker: String
     let played: Card
 }
 
+// Also to be used in Firebase updating loop
 struct GameData: Codable {
     var player1: PlayerData
     var player2: PlayerData
@@ -100,8 +105,7 @@ struct GameData: Codable {
     }
 }
 
+// Notifies us that a networking error occurred
 enum GameDataError: Error {
     case BadInit
 }
-
-// MARK: - GameData Functions

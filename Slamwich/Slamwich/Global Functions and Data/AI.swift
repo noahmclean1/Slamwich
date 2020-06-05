@@ -8,16 +8,18 @@
 
 import Foundation
 
+// Generalized function for the AI to select a card, may be fleshed out more later
 func pickACardAI(hand: [Card], sandwichInProgress: [Card]) -> Int {
     // Simple optimizer to pick best card
     var (bestScore, bestIndex) = (-10000.0,-1)
     for (i,card) in hand.enumerated() {
         
+        // Only pick valid cards
         if !validPlay(card: card, sandwich: sandwichInProgress) {
             continue
         }
         
-        // Simulate placing it
+        // Simulate placing each card
         let (score, _)  = scoreSandwich(sandwichInProgress + [card])
         if  score > bestScore {
             bestScore = score
@@ -25,6 +27,7 @@ func pickACardAI(hand: [Card], sandwichInProgress: [Card]) -> Int {
         }
     }
     
+    // This should NOT ever be reached
     if bestIndex == -1 {
         print("ERROR AI unable to pick card from \(hand)")
     }

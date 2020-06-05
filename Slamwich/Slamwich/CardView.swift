@@ -11,6 +11,12 @@ import UIKit
 @IBDesignable
 class CardView: UIView {
 
+    /*
+     CardView
+     ------------
+     A visual view-form of a given card to use & display
+     */
+    
     @IBOutlet weak var cardTitle: UILabel!
     @IBOutlet weak var cardType: UILabel!
     @IBOutlet weak var cardDescription: UILabel!
@@ -37,19 +43,20 @@ class CardView: UIView {
     }
     
     // MARK: - General Setup
+    
+    // Performs all the necessary work to make a card view have the proper info and appear
     private func setupView(withCard cardStruct: Card) {
         // Attach view to nib properly
         let card = Bundle.main.loadNibNamed("CardView", owner: self, options: nil)![0] as! UIView
         
-        //card.frame = self.bounds
-        //card.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
         // Set up backing card details
         let layer = card.layer
 
+        // Configure visual details
         layer.cornerRadius = 10
-        
         innerContainer.layer.cornerRadius = 10
         
+        // The "card" is essentially an inner view but we can treat it all as one
         self.addSubview(card)
                 
         // Set up card text
@@ -65,7 +72,8 @@ class CardView: UIView {
     }
     
     // MARK: - Helper Functions
-    // Helper function to have a nice selection push
+    // Generalized function to scale a card view
+    // Used on pick up, placement, etc
     func scaleCard(scale: Double, isGrabbed: Bool) {
         
         UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
@@ -73,6 +81,8 @@ class CardView: UIView {
             transform = transform.scaledBy(x: CGFloat(scale), y: CGFloat(scale))
             self.transform = transform
             self.currentScale = scale
+            
+            // If the player picks up the card, we need to signal a slight change so it doesn't clip weirdly
             if !isGrabbed {
                 self.layer.position = CGPoint(x: self.frame.minX, y: self.frame.minY)
             }
@@ -80,6 +90,7 @@ class CardView: UIView {
         }, completion: nil)
     }
 
+    // Useful function to easily get the proper image when loading a card
     static func getCardImage(card: Card) -> UIImage {
         // Check if there's a specific image
         if let img = UIImage(named: card.name) {
@@ -95,6 +106,7 @@ class CardView: UIView {
         return UIImage()
     }
     
+    // Similar to above, but each type has a specific color for various uses
     static func pickColorForType(type: String) -> UIColor {
         var color: UIColor
         switch type {

@@ -76,16 +76,6 @@
 			<string>Proscuitto</string>
 		</array>
 	</dict>
-	<key>Peanut_Banana</key>
-	<dict>
-		<key>multiplier</key>
-		<real>2.0</real>
-		<key>reqs</key>
-		<array>
-			<string>Peanut_Butter</string>
-			<string>Banana</string>
-		</array>
-	</dict>
 	<key>Tuna_Salad</key>
 	<dict>
 		<key>multiplier</key>

@@ -10,6 +10,12 @@ import UIKit
 
 class EndScreenViewController: UIViewController {
 
+    /*
+    EndScreenViewController
+    ------------
+    A nice recap screen for after the game
+    */
+    
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var sandwichTable: UITableView!
@@ -25,6 +31,7 @@ class EndScreenViewController: UIViewController {
 
         overrideUserInterfaceStyle = .light
         
+        // Visually update the screen with the proper info
         if let w = winner {
             if w {
                 mainTitle.text = "You Win!"
@@ -40,6 +47,7 @@ class EndScreenViewController: UIViewController {
         scoreLabel.text = String(myScore)
         otherScoreLabel.text = String(theirScore)
 
+        // Show the biggest sandwich played
         sandwichTable.delegate = self
         sandwichTable.dataSource = self
         sandwichTable.reloadData()
