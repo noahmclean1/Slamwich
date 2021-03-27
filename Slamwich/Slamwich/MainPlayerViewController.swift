@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FirebaseDatabase
 
 class MainPlayerViewController: UIViewController {
 
@@ -24,7 +23,7 @@ class MainPlayerViewController: UIViewController {
     
     let logoOffset: CGFloat = 300.0
     var logoInPlace = false
-    var ref: DatabaseReference!
+    //var ref: DatabaseReference!
     var isQueued = false {
         didSet {
             // TODO (when adding multiplayer)
@@ -41,7 +40,7 @@ class MainPlayerViewController: UIViewController {
 
         // Firebase & visual cleanup
         overrideUserInterfaceStyle = .light
-        ref = Database.database().reference()
+        //ref = Database.database().reference()
         
     }
     
@@ -103,12 +102,14 @@ class MainPlayerViewController: UIViewController {
     }
     
     @IBAction func grabData(_ sender: Any) {
+        /*
         ref.child("queuedUsers").observe(.value, with: { (snapshot) in
             guard let val = snapshot.value as? Dictionary<String, Any> else {return}
             print("--- GRAB DATA ---")
             print(val.count)
             print(val)
         })
+         */
     }
 }
 

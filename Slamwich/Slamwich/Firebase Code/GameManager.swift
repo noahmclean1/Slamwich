@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import FirebaseDatabase
 
 class GameManager {
     
@@ -22,7 +21,7 @@ class GameManager {
     /// Patch 1.0
     
     public static let global = GameManager()
-    let ref = Database.database().reference()
+    //let ref = Database.database().reference()
     
     var gameData: GameData?
     var queueListener: UInt?
@@ -49,7 +48,7 @@ class GameManager {
     // MARK: - Entering the Queue
     func enqueueUser(user: String) {
         username = user
-        
+        /*
         ref.child("queuedUsers").childByAutoId().setValue(["username":user, "gameID":""]) { (error:Error?, newref:DatabaseReference) in
             
             if error != nil {
@@ -80,10 +79,12 @@ class GameManager {
                 }
             })
         }
+         */
     }
 
     func createQueueListener() -> UInt? {
         // Signal an error if there is no userID yet
+        /*
         guard let UID = userID else {print("Queue Listener FAILED"); return nil}
         
         // This listener waits for UserID -> GameID to be set, then removes user from queue
@@ -106,21 +107,25 @@ class GameManager {
         })
         
         return listenerHandle
+         */
+        return nil
     }
 
     // MARK: - Exiting the Queue & Creating a Game
 
     func removeQueueListener(handle: UInt) {
-        ref.removeObserver(withHandle: handle)
+        //ref.removeObserver(withHandle: handle)
     }
 
     func createNewGame(with otherPlayer: PlayerData, myID: String, gameId: String) {
         // Reserve a space on the DB for a new game, assign both players
+        /*
         let playerChoice = chooseFirstPlayer()
         let turns = [1] // TODO
         let me = PlayerData(id: myID, name: username!, score: 0)
         
         print("Creating new game on FireBase")
+        
         ref.child("currentGames").child(gameId).setValue(["player1":otherPlayer, "player2":me, "whoseTurn":playerChoice, "turns":turns]) { (error: Error?, newGame:DatabaseReference) in
             if error != nil {
                 print("Error: \(error.debugDescription)")
@@ -139,6 +144,7 @@ class GameManager {
                 }
             }
         }
+         */
     }
     
     func chooseFirstPlayer() -> Int {
@@ -151,7 +157,9 @@ class GameManager {
     }
     
     func createGameListener() -> UInt? {
+        /*
         guard let game = gameID else {print("Game listener FAILED"); return nil}
+        
         
         // This listener basically runs all game updates!
         let listenerHandle = ref.child("currentGames").child(game).observe(.value, with: {(snapshot: DataSnapshot) in
@@ -180,7 +188,8 @@ class GameManager {
             NotificationCenter.default.post(name: NSNotification.Name("Process Other Turn"), object: nil)
         })
         return listenerHandle
+        */
+        return nil
     }
     
-    // MARK: - Running the Game
 }

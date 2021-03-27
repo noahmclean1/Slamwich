@@ -131,6 +131,7 @@ extension MatchViewController {
                   })
               }
           }
+          // TODO: add in check for online play when applicable
           else {
               turnLabel.text = "Waiting for Opponent..."
               turnLabel.textColor = .orange
@@ -164,7 +165,7 @@ extension MatchViewController {
                   if points != 0.0 {
                       self.theirScore += points
                       self.labelTheirScore.text = String(self.theirScore)
-                      if self.theirScore >= self.winningPoints {
+                      if self.theirScore >= self.WINNING_POINTS {
                           return
                       }
                   }

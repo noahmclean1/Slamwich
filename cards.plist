@@ -142,6 +142,42 @@
 			<key>value</key>
 			<string>-2</string>
 		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Cream_Cheese</string>
+			<key>value</key>
+			<string>1.5</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Brie</string>
+			<key>value</key>
+			<string>2</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Muenster</string>
+			<key>value</key>
+			<string>1.5</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Provolone</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
 	</array>
 	<key>condiment</key>
 	<array>
@@ -208,6 +244,42 @@
 			<key>value</key>
 			<string>1</string>
 		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Hummus</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Butter</string>
+			<key>value</key>
+			<string>0.5</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Cranberry_Sauce</string>
+			<key>value</key>
+			<string>0.5</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Olive_Oil</string>
+			<key>value</key>
+			<string>0.5</string>
+		</dict>
 	</array>
 	<key>fruit</key>
 	<array>
@@ -228,6 +300,24 @@
 			<string>Banana</string>
 			<key>value</key>
 			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Apples</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Pineapple</string>
+			<key>value</key>
+			<string>2</string>
 		</dict>
 	</array>
 	<key>meat</key>
@@ -322,6 +412,33 @@
 			<key>value</key>
 			<string>1.5</string>
 		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Lox</string>
+			<key>value</key>
+			<string>2</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Corned_Beef</string>
+			<key>value</key>
+			<string>1.5</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Chicken</string>
+			<key>value</key>
+			<string>2</string>
+		</dict>
 	</array>
 	<key>veggie</key>
 	<array>
@@ -396,6 +513,24 @@
 			<string>Avocado</string>
 			<key>value</key>
 			<string>3</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Cucumber</string>
+			<key>value</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>flavor</key>
+			<string>""
+</string>
+			<key>name</key>
+			<string>Onions</string>
+			<key>value</key>
+			<string>1.5</string>
 		</dict>
 	</array>
 </dict>

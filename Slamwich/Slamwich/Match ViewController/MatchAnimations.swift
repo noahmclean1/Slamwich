@@ -17,6 +17,7 @@ extension MatchViewController {
         // Create the card view
         let newCard = CardView(card: card, at: CGPoint(x: view.center.x, y: 500))
         
+        let properScale = Double(handContainer.bounds.height / 300.0)
         newCard.scaleCard(scale: 0.5, isGrabbed: false)
         
         if !me {
@@ -34,12 +35,16 @@ extension MatchViewController {
         
         // Animate move
         UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseInOut, animations: {
-            newCard.scaleCard(scale: 1, isGrabbed: false)
+            newCard.scaleCard(scale: properScale, isGrabbed: false)
             
             newCard.center = CGPoint(x: self.handContainer.center.x, y: self.handContainer.center.y)
     
         }, completion: {
             finished in
+            
+            if self.sandwich.count == 0 && newCard.card.type != "bread" {
+                newCard.alpha = 0.5
+            }
             self.rebalanceHand()
         })
     }
@@ -54,6 +59,13 @@ extension MatchViewController {
                 // Give slight rotation for fan
                 let rotate = (CGFloat(i) - CGFloat(total) * 0.5) * (CGFloat.pi * 0.025)
                 cardView.transform = CGAffineTransform(rotationAngle: CGFloat(rotate))
+                
+                // Maintain proper scaling as well
+                if let cv = cardView as? CardView{
+                    if cv.currentScale != 1.0 {
+                        cv.scaleCard(scale: cv.currentScale, isGrabbed: false)
+                    }
+                }
                 
                 // Pull the cards closer to the center
                 let xpt = self.handContainer.bounds.width * CGFloat(ratio) + 25
@@ -85,6 +97,9 @@ extension MatchViewController {
         
         flashTurnLabel()
         endingAnimation(didIWin: myScore > theirScore)
+        
+        // Set this so when the view re-appears it'll start a new game
+        gameInProgress = false
     }
     
     // Display a floating message of a given type (inflection)
@@ -152,6 +167,7 @@ extension MatchViewController {
                self.endScreenButton.alpha = 1
                self.endScreenButton.isUserInteractionEnabled = true
            })
+        
        })
     }
     

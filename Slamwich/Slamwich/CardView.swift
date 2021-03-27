@@ -75,9 +75,8 @@ class CardView: UIView {
     // Generalized function to scale a card view
     // Used on pick up, placement, etc
     func scaleCard(scale: Double, isGrabbed: Bool) {
-        
         UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
-            var transform = CGAffineTransform.identity
+            var transform = self.transform
             transform = transform.scaledBy(x: CGFloat(scale), y: CGFloat(scale))
             self.transform = transform
             self.currentScale = scale

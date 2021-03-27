@@ -2,6 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Apples_&amp;_Brie</key>
+	<dict>
+		<key>multiplier</key>
+		<real>2.5</real>
+		<key>reqs</key>
+		<array>
+			<string>Baguette</string>
+			<string>Brie</string>
+			<string>Apples</string>
+		</array>
+	</dict>
 	<key>BLT</key>
 	<dict>
 		<key>multiplier</key>
@@ -9,6 +20,29 @@
 		<key>reqs</key>
 		<array>
 			<string>Bacon</string>
+			<string>Lettuce</string>
+			<string>Tomato</string>
+		</array>
+	</dict>
+	<key>BMK_Special</key>
+	<dict>
+		<key>multiplier</key>
+		<real>2.0</real>
+		<key>reqs</key>
+		<array>
+			<string>Bagel</string>
+			<string>Turkey</string>
+			<string>Cheddar</string>
+		</array>
+	</dict>
+	<key>Chicken_Salad</key>
+	<dict>
+		<key>multiplier</key>
+		<real>3.5</real>
+		<key>reqs</key>
+		<array>
+			<string>Chicken</string>
+			<string>Mayo</string>
 			<string>Lettuce</string>
 			<string>Tomato</string>
 		</array>
@@ -44,6 +78,28 @@
 			<string>Pickle</string>
 		</array>
 	</dict>
+	<key>Deli_Delicious</key>
+	<dict>
+		<key>multiplier</key>
+		<real>2.0</real>
+		<key>reqs</key>
+		<array>
+			<string>Pastrami</string>
+			<string>Rye</string>
+			<string>Mustard</string>
+		</array>
+	</dict>
+	<key>Deli_Special</key>
+	<dict>
+		<key>multiplier</key>
+		<real>2.0</real>
+		<key>reqs</key>
+		<array>
+			<string>Bagel</string>
+			<string>Cream_Cheese</string>
+			<string>Lox</string>
+		</array>
+	</dict>
 	<key>Grilled_Cheese</key>
 	<dict>
 		<key>multiplier</key>
@@ -55,25 +111,18 @@
 			<string>t:cheese</string>
 		</array>
 	</dict>
-	<key>House_Special</key>
+	<key>Hearty_Meal</key>
 	<dict>
 		<key>multiplier</key>
-		<real>2.0</real>
+		<real>5.0</real>
 		<key>reqs</key>
 		<array>
-			<string>Turkey</string>
+			<string>Sourdough</string>
+			<string>Roast_Beef</string>
 			<string>Cheddar</string>
-		</array>
-	</dict>
-	<key>Italian</key>
-	<dict>
-		<key>multiplier</key>
-		<real>2.0</real>
-		<key>reqs</key>
-		<array>
-			<string>Salami</string>
-			<string>Bologna</string>
-			<string>Proscuitto</string>
+			<string>Lettuce</string>
+			<string>Tomato</string>
+			<string>Mustard</string>
 		</array>
 	</dict>
 	<key>Peanut_Banana</key>
@@ -86,6 +135,123 @@
 			<string>Banana</string>
 		</array>
 	</dict>
+	<key>Reuben</key>
+	<dict>
+		<key>multiplier</key>
+		<real>3.0</real>
+		<key>reqs</key>
+		<array>
+			<string>Swiss</string>
+			<string>Rye</string>
+			<string>Corned_Beef</string>
+		</array>
+	</dict>
+	<key>Sloppy_Joe</key>
+	<dict>
+		<key>multiplier</key>
+		<real>2.5</real>
+		<key>reqs</key>
+		<array>
+			<string>Ground_Beef</string>
+			<string>Ketchup</string>
+			<string>Onions</string>
+			<string>Barbeque</string>
+		</array>
+	</dict>
+	<key>Sorta_Salad</key>
+	<dict>
+		<key>multiplier</key>
+		<real>3.5</real>
+		<key>reqs</key>
+		<array>
+			<string>Spinach</string>
+			<string>Hummus</string>
+			<string>t:cheese</string>
+			<string>Tomato</string>
+			<string>Olive_Oil</string>
+		</array>
+	</dict>
+	<key>The_American</key>
+	<dict>
+		<key>multiplier</key>
+		<real>1.5</real>
+		<key>reqs</key>
+		<array>
+			<string>White</string>
+			<string>Mayo</string>
+			<string>American</string>
+			<string>Ham</string>
+		</array>
+	</dict>
+	<key>The_Dutch</key>
+	<dict>
+		<key>multiplier</key>
+		<real>4.0</real>
+		<key>reqs</key>
+		<array>
+			<string>Butter</string>
+			<string>Gouda</string>
+			<string>Tomato</string>
+			<string>Proscuitto</string>
+		</array>
+	</dict>
+	<key>The_Gobbler</key>
+	<dict>
+		<key>multiplier</key>
+		<real>4.0</real>
+		<key>reqs</key>
+		<array>
+			<string>Cream_Cheese</string>
+			<string>Havarti</string>
+			<string>Turkey</string>
+			<string>Cranberry_Sauce</string>
+		</array>
+	</dict>
+	<key>The_Hawaiian</key>
+	<dict>
+		<key>multiplier</key>
+		<real>2.5</real>
+		<key>reqs</key>
+		<array>
+			<string>Spam</string>
+			<string>Pineapple</string>
+			<string>Tomato</string>
+			<string>Olive_Oil</string>
+		</array>
+	</dict>
+	<key>The_Italian</key>
+	<dict>
+		<key>multiplier</key>
+		<real>2.0</real>
+		<key>reqs</key>
+		<array>
+			<string>Parmesean</string>
+			<string>Tomato</string>
+			<string>Chicken</string>
+		</array>
+	</dict>
+	<key>The_Meatlovers</key>
+	<dict>
+		<key>multiplier</key>
+		<real>2.0</real>
+		<key>reqs</key>
+		<array>
+			<string>Salami</string>
+			<string>Bologna</string>
+			<string>Proscuitto</string>
+		</array>
+	</dict>
+	<key>The_Tasty</key>
+	<dict>
+		<key>multiplier</key>
+		<real>2.0</real>
+		<key>reqs</key>
+		<array>
+			<string>Muenster</string>
+			<string>Pepperjack</string>
+			<string>Salami</string>
+		</array>
+	</dict>
 	<key>Tuna_Salad</key>
 	<dict>
 		<key>multiplier</key>
@@ -95,6 +261,18 @@
 			<string>Tuna</string>
 			<string>Mayo</string>
 			<string>Lettuce</string>
+		</array>
+	</dict>
+	<key>Vegetarian_Special</key>
+	<dict>
+		<key>multiplier</key>
+		<real>3.0</real>
+		<key>reqs</key>
+		<array>
+			<string>Whole_Wheat</string>
+			<string>Cucumber</string>
+			<string>Hummus</string>
+			<string>Tomato</string>
 		</array>
 	</dict>
 </dict>

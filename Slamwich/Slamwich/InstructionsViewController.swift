@@ -34,7 +34,7 @@ class InstructionsViewController: UIViewController {
         
         // Add in instructions in a properly formatted manner
         mainInstructions.text = """
-                                Slamwich is a game about making (and eating) sandwiches.\n
+                                Sandwich Stack is a game about making (and eating) sandwiches.\n
                                 You will be dealt a hand of cards, each of which is an ingredient. Play a card by dragging it on top of the sandwich pile. \n
                                 Whoever plays a piece of bread on top of a sandwich completes that sandwich and earns all of its points. When either player reaches 100 points or runs out of cards to draw, a winner is declared!\n
                                 Combos award bonus points to a sandwich with certain types of cards in it. Score more points by making bigger sandwiches and forming combos!\n

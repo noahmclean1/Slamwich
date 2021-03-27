@@ -29,6 +29,7 @@ class MatchViewController: UIViewController {
     @IBOutlet weak var changePointsLabel: UILabel!
     @IBOutlet weak var changeCombosLabel: UILabel!
     @IBOutlet weak var endScreenButton: UIButton!
+    @IBOutlet weak var exitButton: UIButton!
     
     var myTurn: Bool!
     var deck = [Card]() {
@@ -45,7 +46,7 @@ class MatchViewController: UIViewController {
             }
         }
     }
-    let winningPoints = 100.0
+    let WINNING_POINTS = 1.0 // TODO
     var emitter: CAEmitterLayer!
     
     var myHand = [Card]()
@@ -53,14 +54,14 @@ class MatchViewController: UIViewController {
     var sandwich = [Card]()
     var myScore = 0.0 {
         didSet {
-            if myScore > winningPoints {
+            if myScore > WINNING_POINTS {
                 declareWinner()
             }
         }
     }
     var theirScore = 0.0 {
         didSet {
-            if theirScore > winningPoints {
+            if theirScore > WINNING_POINTS {
                 declareWinner()
             }
         }
@@ -70,7 +71,22 @@ class MatchViewController: UIViewController {
         didSet {
             if let card = movePrediction {
                 let diffCombos = newCombosFrom(sandwich, newCard: card, activeCombos)
-                changeCombosLabel.text = combosToString(diffCombos)
+                
+                    
+                var comboText = combosToString(diffCombos)
+                
+                // Make sure to add a notification for the same bread
+                if sandwich.count > 0 {
+                    if movePrediction!.type == "bread" && sandwich[0].name == movePrediction!.name {
+                        if comboText == "No combos" {
+                            comboText = ""
+                        }
+                        comboText += "Same Bread\n"
+                    }
+                }
+                
+                changeCombosLabel.text = comboText
+                
                 let newScore = scoreSandwich(sandwich + [card]).0 - currentScore
                 changePointsLabel.text = "\(newScore < 0 ? "" : "+")\(newScore)"
                 
@@ -121,6 +137,9 @@ class MatchViewController: UIViewController {
         
         // Style end game button
         endScreenButton.layer.cornerRadius = 15
+        
+        // Style exit button
+        exitButton.layer.cornerRadius = 15
         
         // Set up emitter layer for victories
         let emit = CAEmitterLayer()
@@ -206,6 +225,7 @@ class MatchViewController: UIViewController {
                 // Is the play valid? Then play it!
                 if validPlay(card: gestureView.card, sandwich: sandwich) && !expanded{
                                         
+                    gestureView.transform = CGAffineTransform.identity
                     gestureView.scaleCard(scale: 1.25, isGrabbed: true)
                     gestureView.removeFromSuperview()
                     sandwichSlot.addSubview(gestureView)
@@ -216,7 +236,7 @@ class MatchViewController: UIViewController {
                     if points != 0.0 {
                         myScore += points
                         labelYourScore.text = String(myScore)
-                        if myScore >= winningPoints {
+                        if myScore >= WINNING_POINTS {
                             return
                         }
                     }
@@ -240,7 +260,8 @@ class MatchViewController: UIViewController {
             }
             
             // If not overlapping or invalid, put it back
-            gestureView.scaleCard(scale: 1.0, isGrabbed: true)
+            let properScale = Double(handContainer.bounds.height / 300.0)
+            gestureView.scaleCard(scale: properScale, isGrabbed: true)
             rebalanceHand()
             return
         }

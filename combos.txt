@@ -1,9 +1,28 @@
 Classic 2 Peanut_Butter Grape_Jelly
 BLT 3 Bacon Lettuce Tomato
 Cubano 2 Ham Pickle
-House_Special 2 Turkey Cheddar
 Grilled_Cheese 2 t:cheese t:cheese t:cheese
-Italian 2 Salami Bologna Proscuitto
+The_Meatlovers 2 Salami Bologna Proscuitto
 Tuna_Salad 3 Tuna Mayo Lettuce
 Cole_Slaw 1.5 Cabbage Mayo Carrots
 Peanut_Banana 2 Peanut_Butter Banana
+BMK_Special 2 Bagel Turkey Cheddar
+Deli_Special 2 Bagel Cream_Cheese Lox
+Apples_&_Brie 2.5 Baguette Brie Apples
+Vegetarian_Special 3 Whole_Wheat Cucumber Hummus Tomato
+Hearty_Meal 5 Sourdough Roast_Beef Cheddar Lettuce Tomato Mustard
+Reuben 3 Swiss Rye Corned_Beef
+The_American 1.5 White Mayo American Ham
+The_Dutch 4 Butter Gouda Tomato Proscuitto
+The_Tasty 2 Muenster Pepperjack Salami
+The_Gobbler 4 Cream_Cheese Havarti Turkey Cranberry_Sauce
+The_Italian 2 Parmesean Tomato Chicken
+Chicken_Salad 3.5 Chicken Mayo Lettuce Tomato
+Deli_Delicious 2 Pastrami Rye Mustard
+The_Hawaiian 2.5 Spam Pineapple Tomato Olive_Oil
+Sorta_Salad 3.5 Spinach Hummus t:cheese Tomato Olive_Oil
+Sloppy_Joe 2.5 Ground_Beef Ketchup Onions Barbeque
+BLAT 3 Bacon Lettuce Tomato Avocado
+Hot_Diggity_Dog 4 Hot_Dog Bun Relish Ketchup
+Spicy_Cubano 2 Ham Pickle Jalapenos
+North_Italian 4 Turkey Provolone Tomato Cucumber Pesto

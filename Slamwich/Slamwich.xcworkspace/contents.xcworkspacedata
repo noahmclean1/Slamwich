@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Slamwich.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Pods/Pods.xcodeproj">
+      location = "group:/Users/noahmclean/Desktop/Slamwich/Slamwich/SandwichStack.xcodeproj">
    </FileRef>
 </Workspace>

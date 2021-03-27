@@ -37,9 +37,23 @@ for line in data:
 		newreqs.append(req.replace("\n",""))
 	combos[tokens[0]] = {"multiplier": multiplier, "reqs":newreqs}
 
-if os.path.exists("combos.plist"):
-	os.remove("combos.plist")
+if os.path.exists("Slamwich/Slamwich/combos.plist"):
+	os.remove("Slamwich/Slamwich/combos.plist")
 
-with open("combos.plist", "wb+") as c:
+with open("Slamwich/Slamwich/combos.plist", "wb+") as c:
 	dump(combos, c)
 	print("Successfully updated Combos!")
+
+print("-------------")
+
+# Check for combo-less cards
+for (_, cardList) in cards.items():
+	for card in cardList:
+		name = card["name"]
+		inflag = False
+		for (comboName, combo) in combos.items():
+			if name in combo["reqs"]:
+				inflag = True
+				break
+		if not inflag:
+			print(f"{name}\t has no direct combos")
